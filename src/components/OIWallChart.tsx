@@ -97,13 +97,20 @@ export default function OIWallChart({
 }: OIWallChartProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const visiblePrice = useMemo(() => {
-    const closedPrice = price
-      .filter((bar) => bar.isClosed)
+    const latestOpenTime = price.filter((bar) => !bar.isClosed).reduce((latest, bar) => {
+      const time = Date.parse(bar.time);
+      return Number.isFinite(time) ? Math.max(latest, time) : latest;
+    }, Number.NEGATIVE_INFINITY);
+    const renderablePrice = price
+      // Keep historical data closed, but retain the single newest open bar so
+      // the chart presents the freshest source value without treating it as
+      // completed history.
+      .filter((bar) => bar.isClosed || (Number.isFinite(latestOpenTime) && Date.parse(bar.time) === latestOpenTime))
       .sort((a, b) => Date.parse(a.time) - Date.parse(b.time));
-    const windowStart = startOfLatestDataWindow(closedPrice);
+    const windowStart = startOfLatestDataWindow(renderablePrice);
     return windowStart === null
-      ? closedPrice
-      : closedPrice.filter((bar) => Date.parse(bar.time) >= windowStart);
+      ? renderablePrice
+      : renderablePrice.filter((bar) => Date.parse(bar.time) >= windowStart);
   }, [price]);
   const visibleWalls = useMemo(() => walls.filter((wall) => {
     if (wallMode === 'call') return wall.callOi > 0;
@@ -277,6 +284,7 @@ export default function OIWallChart({
           if (bar) {
             const plottedValue = chartPriceValue(bar, priceMode);
             lines.push(`${chartPriceLabel(priceMode)}: <b>$${plottedValue.toLocaleString(undefined, { maximumFractionDigits: 2 })}</b>`);
+            lines.push(`<span style="color:${bar.isClosed ? '#94a3b8' : '#facc15'}">${bar.isClosed ? 'Closed bar' : 'Current open bar · latest source value'}</span>`);
             if (priceMode === 'mean') lines.push(`<span style="color:#94a3b8">Close reference: $${bar.close.toLocaleString()}</span>`);
           }
           const projectionIndex = projection?.data.findIndex(([time]) => time === at) ?? -1;

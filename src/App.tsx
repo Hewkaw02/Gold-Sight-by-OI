@@ -181,8 +181,22 @@ export default function App() {
     if (!manifest) return 'กำลังโหลด coverage';
     const dailyEnd = manifest.datasets.price_1d?.coverageEnd ?? manifest.coverage.price.end?.slice(0, 10) ?? '—';
     const intradayEnd = manifest.datasets.price_4h?.coverageEnd ?? manifest.coverage.price.end?.slice(0, 10) ?? '—';
-    return '1D ' + dailyEnd + ' · 4H ' + intradayEnd;
+    return 'closed 1D ' + dailyEnd + ' · 4H ' + intradayEnd;
   }, [manifest]);
+  const latestBarLabel = useMemo(() => {
+    const latest = (data?.price ?? []).reduce<{ time: number; closeTime: number; isClosed: boolean } | null>((current, bar) => {
+      const time = Date.parse(bar.time);
+      if (!Number.isFinite(time) || (current && time <= current.time)) return current;
+      const closeTime = Date.parse(bar.closeTime || bar.time);
+      return {
+        time,
+        closeTime: Number.isFinite(closeTime) ? closeTime : time,
+        isClosed: bar.isClosed,
+      };
+    }, null);
+    if (!latest) return 'Latest bar —';
+    return `Latest ${latest.isClosed ? 'closed' : 'open'} ${timeframe} ${new Date(latest.closeTime).toISOString().slice(0, 10)}`;
+  }, [data, timeframe]);
   const oiExpiryLabel = useMemo(() => {
     const start = manifest?.coverage.oiExpiry?.start ?? '—';
     const end = manifest?.coverage.oiExpiry?.end ?? '—';
@@ -190,14 +204,14 @@ export default function App() {
   }, [manifest]);
 
   const chartWindowLabel = useMemo(() => {
-    const latestCloseTime = (data?.price ?? []).filter((bar) => bar.isClosed).reduce((latest, bar) => {
-      // `bar.time` is the opening timestamp. Use the closing timestamp for
-      // the visible window so the label matches the dataset coverage date.
+    const latestAvailableTime = (data?.price ?? []).reduce((latest, bar) => {
+      // Include the current open bar. Its closeTime identifies the current
+      // trading date even though the bar has not completed yet.
       const closeTime = Date.parse(bar.closeTime || bar.time);
       return Number.isFinite(closeTime) ? Math.max(latest, closeTime) : latest;
     }, Number.NEGATIVE_INFINITY);
-    if (!Number.isFinite(latestCloseTime)) return '— → —';
-    const latestDate = new Date(latestCloseTime);
+    if (!Number.isFinite(latestAvailableTime)) return '— → —';
+    const latestDate = new Date(latestAvailableTime);
     return `${latestDate.getUTCFullYear()}-06-01 → ${latestDate.toISOString().slice(0, 10)}`;
   }, [data]);
 
@@ -212,6 +226,7 @@ export default function App() {
         <div className="header-meta">
           <span className="instrument-pill">BLACKBULL:GOLD.F</span>
           <span className="coverage">Chart window {chartWindowLabel}</span>
+          <span className="coverage">{latestBarLabel}</span>
           <span className="coverage">Data coverage {coverageLabel}</span>
           <span className="coverage">OI expiry {oiExpiryLabel}</span>
         </div>
