@@ -44,6 +44,8 @@ services:
       PRICE_1D_MAX_AGE_HOURS: "72"
       PRICE_4H_MAX_AGE_HOURS: "12"
       OI_MAX_BUSINESS_DAY_LAG: "2"
+      FAIL_ON_PRICE_ERROR: "true"
+      FAIL_ON_OI_ERROR: "true"
       PYTHON_BIN: python3
     volumes:
       - ./public/data:/app/public/data
@@ -73,6 +75,8 @@ services:
       PRICE_1D_MAX_AGE_HOURS: "72"
       PRICE_4H_MAX_AGE_HOURS: "12"
       OI_MAX_BUSINESS_DAY_LAG: "2"
+      FAIL_ON_PRICE_ERROR: "true"
+      FAIL_ON_OI_ERROR: "true"
       PYTHON_BIN: python3
       SCHEDULER_TIMEZONE: "${SCHEDULER_TIMEZONE:-America/Chicago}"
       SCHEDULER_PRICE_INTERVAL_MINUTES: "${SCHEDULER_PRICE_INTERVAL_MINUTES:-15}"

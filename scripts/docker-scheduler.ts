@@ -190,7 +190,11 @@ async function runOi(slot: SessionSlot) {
 }
 
 async function tick(oiSchedule: OiSchedule[]) {
-  if (stopping || activeRun) return;
+  if (stopping) return;
+  if (activeRun) {
+    await writeHeartbeat('running', 'collector');
+    return;
+  }
   const clock = schedulerClock();
   if (!weekdays.has(clock.weekday)) {
     await writeHeartbeat('idle', 'weekend');

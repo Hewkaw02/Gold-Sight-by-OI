@@ -100,6 +100,21 @@ function sessionSlots(): SessionSlot[] {
     .filter((value): value is SessionSlot => value === 'open' || value === 'mid' || value === 'close');
 }
 
+function snapshotHasOi(snapshot: OISnapshot): boolean {
+  return snapshot.strikes.some((strike) => strike.callOpenInterest != null || strike.putOpenInterest != null);
+}
+
+function validateLiveOi(result: Awaited<ReturnType<typeof fetchStandaloneOi>>): void {
+  const frontWithOi = result.frontSnapshots.filter(snapshotHasOi).length;
+  const allExpiryWithOi = result.allExpirySnapshots.filter(snapshotHasOi).length;
+  if (allExpiryWithOi === 0) {
+    throw new Error('Live CME collection returned no all-expiry snapshots with OI');
+  }
+  if (frontWithOi === 0) {
+    throw new Error('Live CME collection returned no front-equivalent snapshots with OI');
+  }
+}
+
 function frontTargetDtes(): number[] {
   const configured = (process.env.OI_TARGET_DTES ?? FRONT_TARGET_DTES.join(','))
     .split(',')
@@ -228,7 +243,10 @@ async function main() {
   let oiAuthFailure: DashboardHealth['auth'] | null = null;
   let liveOi: Awaited<ReturnType<typeof fetchStandaloneOi>> | null = null;
   if (oiAttempted) {
-    try { liveOi = await maybeFetchOi(latestClosedPriceBar(price4h)?.close ?? 0); }
+    try {
+      liveOi = await maybeFetchOi(latestClosedPriceBar(price4h)?.close ?? 0);
+      if (liveOi) validateLiveOi(liveOi);
+    }
     catch (error) {
       oiError = error instanceof Error ? error.message : String(error);
       if (error instanceof CmeSessionError) {

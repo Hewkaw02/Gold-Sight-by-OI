@@ -1,11 +1,13 @@
 import type { OISnapshot, OIStrike, SessionSlot, SymbolCode } from '../../src/domain/types.js';
 import { pageFetch } from './cme-browser.js';
 
-interface ExpiryInfo {
+export interface ExpiryInfo {
   code: string;
   label: string;
   groupLabel: string;
   date: string;
+  contractMonth: number;
+  contractYear: number;
 }
 
 interface SettlementRow {
@@ -16,12 +18,21 @@ interface SettlementRow {
 }
 
 const GC_OPTIONS_PRODUCT_ID = 192;
-const GC_SETTLEMENT_PRODUCT_ID = 437;
+// CME exposes the broad settlement-date catalogue through product 437, but
+// the actual Gold option settlement rows live under the option product 192.
+// Using 437 for the rows endpoint returns HTTP 200 with an empty payload.
+const GC_SETTLEMENT_METADATA_PRODUCT_ID = 437;
+const GC_SETTLEMENT_PRODUCT_ID = GC_OPTIONS_PRODUCT_ID;
 
 function numeric(value: unknown): number | null {
   if (value == null || String(value).trim() === '' || String(value).trim() === '-') return null;
   const parsed = Number(String(value).replaceAll(',', ''));
   return Number.isFinite(parsed) ? parsed : null;
+}
+
+function integer(value: unknown): number | null {
+  const parsed = numeric(value);
+  return parsed != null && Number.isInteger(parsed) ? parsed : null;
 }
 
 function dateOnly(value: unknown): string | null {
@@ -44,6 +55,33 @@ function monthCode(month: number): string {
   return ({ 1: 'F', 2: 'G', 3: 'H', 4: 'J', 5: 'K', 6: 'M', 7: 'N', 8: 'Q', 9: 'U', 10: 'V', 11: 'X', 12: 'Z' } as Record<number, string>)[month] ?? 'X';
 }
 
+const MONTH_NAMES: Record<string, number> = {
+  jan: 1, january: 1, feb: 2, february: 2, mar: 3, march: 3,
+  apr: 4, april: 4, may: 5, jun: 6, june: 6, jul: 7, july: 7,
+  aug: 8, august: 8, sep: 9, september: 9, oct: 10, october: 10,
+  nov: 11, november: 11, dec: 12, december: 12,
+};
+
+function contractMonthYear(expiry: any, date: string, label: string): { month: number; year: number } {
+  // The ATM endpoint's expirationMonth is zero-based (Sep = 8), while the
+  // settlement metadata uses one-based months. Prefer the human-readable
+  // contract label because it is unambiguous across both endpoints.
+  const labelMatch = label.match(/^([A-Za-z]+)\s+(\d{4})$/);
+  const labelMonth = labelMatch ? MONTH_NAMES[labelMatch[1].toLowerCase()] : undefined;
+  const labelYear = labelMatch ? Number(labelMatch[2]) : undefined;
+  if (labelMonth != null && labelYear != null && Number.isInteger(labelYear)) return { month: labelMonth, year: labelYear };
+
+  const rawMonth = integer(expiry.expirationMonth ?? expiry.expiration?.month);
+  const rawYear = integer(expiry.expirationYear ?? expiry.expiration?.year);
+  if (rawMonth != null && rawYear != null) {
+    const month = rawMonth >= 0 && rawMonth <= 11 ? rawMonth + 1 : rawMonth;
+    if (month >= 1 && month <= 12) return { month, year: rawYear };
+  }
+
+  const parsedDate = new Date(`${date}T00:00:00Z`);
+  return { month: parsedDate.getUTCMonth() + 1, year: parsedDate.getUTCFullYear() };
+}
+
 async function getExpiries(page: any): Promise<ExpiryInfo[]> {
   const raw = await pageFetch<any[]>(page, `https://www.cmegroup.com/CmeWS/mvc/atm/expirations/${GC_OPTIONS_PRODUCT_ID}`);
   const result: ExpiryInfo[] = [];
@@ -52,11 +90,11 @@ async function getExpiries(page: any): Promise<ExpiryInfo[]> {
     for (const expiry of Array.isArray(group?.contractExpirations) ? group.contractExpirations : []) {
       const date = dateOnly(expiry.lastTradeDate ?? expiry.expirationDate);
       if (!date || seen.has(date)) continue;
-      const parsedDate = new Date(`${date}T00:00:00Z`);
-      const code = `${monthCode(parsedDate.getUTCMonth() + 1)}${String(parsedDate.getUTCFullYear()).slice(-1)}_${expiry.productId ?? GC_OPTIONS_PRODUCT_ID}`;
       const groupLabel = String(group.label ?? group.name ?? 'Options');
       const expiryLabel = String(expiry.label ?? expiry.name ?? date);
-      result.push({ code, label: `${groupLabel} - ${expiryLabel}`, groupLabel, date });
+      const contract = contractMonthYear(expiry, date, expiryLabel);
+      const code = `${monthCode(contract.month)}${String(contract.year).slice(-1)}`;
+      result.push({ code, label: expiryLabel, groupLabel, date, contractMonth: contract.month, contractYear: contract.year });
       seen.add(date);
     }
   }
@@ -81,37 +119,59 @@ function isoFromUsDate(value: string): string | null {
 
 async function fetchSettlementMetadata(page: any): Promise<any[]> {
   try {
-    const raw = await pageFetch<any[]>(page, `https://www.cmegroup.com/CmeWS/mvc/Settlements/Options/TradeDateAndExpirations/${GC_SETTLEMENT_PRODUCT_ID}`);
+    const raw = await pageFetch<any[]>(page, `https://www.cmegroup.com/CmeWS/mvc/Settlements/Options/TradeDateAndExpirations/${GC_SETTLEMENT_METADATA_PRODUCT_ID}`);
     return Array.isArray(raw) ? raw : [];
   } catch {
     return [];
   }
 }
 
-function findMatchedExpiration(metadata: any[], expiry: ExpiryInfo): any | null {
-  const group = metadata.find((item) => String(item?.label ?? '').toLowerCase() === expiry.groupLabel.toLowerCase());
-  const expirations = Array.isArray(group?.expirations) ? group.expirations : [];
+function metadataContractMonthYear(item: any): { month: number; year: number } | null {
+  const expiration = item?.expiration ?? item?.key?.expiration;
+  const month = integer(expiration?.month);
+  const year = integer(expiration?.year);
+  return month != null && year != null ? { month, year } : null;
+}
+
+export function findMatchedExpiration(metadata: any[], expiry: ExpiryInfo): any | null {
+  const groups = metadata.filter((item) => String(item?.label ?? '').toLowerCase() === expiry.groupLabel.toLowerCase());
+  const candidateGroups = groups.length > 0 ? groups : metadata;
+  const expirations = candidateGroups.flatMap((group) => Array.isArray(group?.expirations) ? group.expirations : []);
   return expirations.find((item: any) => {
-    const lastTradeDate = dateOnly(item?.lastTradeDate?.timestamp ?? item?.lastTradeDate);
-    const itemDate = lastTradeDate ?? (item?.expiration?.year && item?.expiration?.month
-      ? `${item.expiration.year}-${String(item.expiration.month).padStart(2, '0')}-01`
-      : null);
-    return itemDate === expiry.date;
+    const contract = metadataContractMonthYear(item);
+    if (contract?.month === expiry.contractMonth && contract.year === expiry.contractYear) return true;
+    return String(item?.label ?? '').trim().toLowerCase() === expiry.label.trim().toLowerCase();
   }) ?? null;
+}
+
+function settlementDateValue(value: unknown): string | null {
+  if (typeof value === 'string') return value;
+  if (!value || typeof value !== 'object') return null;
+  const record = value as Record<string, any>;
+  const date = record.formatedDate ?? record.formattedDate ?? record.date?.formatedDate ?? record.date?.formattedDate;
+  return typeof date === 'string' ? date : null;
+}
+
+export function selectSettlementDate(tradeDate: string, availableValues: unknown[]): string {
+  const available = [...new Set(availableValues
+    .map(settlementDateValue)
+    .map((value) => value ? isoFromUsDate(value) ?? dateOnly(value) : null)
+    .filter((value): value is string => Boolean(value)))].sort();
+  const latestAvailable = available.filter((value) => value <= tradeDate).at(-1) ?? available.at(-1) ?? tradeDate;
+  return usDate(latestAvailable);
 }
 
 async function fetchSettlementRows(page: any, expiry: ExpiryInfo, matched: any | null, tradeDate: string, metadata: any[]): Promise<{ rows: SettlementRow[]; oiAsOfDate: string | null }> {
   if (!matched) return { rows: [], oiAsOfDate: null };
   const contractId = matched.contractId ?? matched.monthYear ?? matched.expiration?.monthYear;
-  const expirationCode = matched.expiration?.code ?? expiry.code;
+  const expirationCode = matched.expiration?.code ?? matched.key?.expiration?.code ?? expiry.code;
   if (!contractId) return { rows: [], oiAsOfDate: null };
   const availableDates = (Array.isArray(matched.tradeDates) ? matched.tradeDates : metadata
     .flatMap((group) => Array.isArray(group?.tradeDates) ? group.tradeDates : []))
-    .map((item: any) => item.formatedDate ?? item.formattedDate)
-    .filter(Boolean);
-  const requested = usDate(tradeDate);
-  const requestedDate = availableDates.includes(requested) ? requested : availableDates[0] ?? requested;
-  const url = `https://www.cmegroup.com/CmeWS/mvc/Settlements/Options/Settlements/${GC_SETTLEMENT_PRODUCT_ID}/OOF?strategy=DEFAULT&optionProductId=${GC_SETTLEMENT_PRODUCT_ID}&monthYear=${contractId}&optionExpiration=${GC_SETTLEMENT_PRODUCT_ID}-${expirationCode}&pageSize=5000&tradeDate=${requestedDate}`;
+    .map((value: unknown) => settlementDateValue(value))
+    .filter((value: string | null): value is string => Boolean(value));
+  const requestedDate = selectSettlementDate(tradeDate, availableDates);
+  const url = `https://www.cmegroup.com/CmeWS/mvc/Settlements/Options/Settlements/${GC_SETTLEMENT_PRODUCT_ID}/OOF?strategy=DEFAULT&optionProductId=${GC_OPTIONS_PRODUCT_ID}&monthYear=${contractId}&optionExpiration=${GC_OPTIONS_PRODUCT_ID}-${expirationCode}&pageSize=5000&tradeDate=${requestedDate}`;
   try {
     const raw = await pageFetch<any>(page, url, { headers: { Accept: 'application/json', 'X-Requested-With': 'XMLHttpRequest' } });
     const rows: SettlementRow[] = [];
@@ -122,7 +182,8 @@ async function fetchSettlementRows(page: any, expiry: ExpiryInfo, matched: any |
       if (strike == null || !optionType) continue;
       rows.push({ strike, optionType, openInterest: numeric(row.openInterest ?? row.oi ?? row.open_interest), volume: numeric(row.volume) });
     }
-    return { rows, oiAsOfDate: rows.length > 0 ? isoFromUsDate(requestedDate) : null };
+    const responseTradeDate = typeof raw?.tradeDate === 'string' ? raw.tradeDate : requestedDate;
+    return { rows, oiAsOfDate: rows.length > 0 ? isoFromUsDate(responseTradeDate) ?? isoFromUsDate(requestedDate) : null };
   } catch {
     return { rows: [], oiAsOfDate: null };
   }
@@ -203,6 +264,7 @@ export async function fetchAllExpiryOptions(
   fallbackFuturePrice: number,
 ): Promise<OISnapshot[]> {
   const expiries = await getExpiries(page);
+  if (expiries.length === 0) throw new Error('CME returned no Gold option expiries');
   const metadata = await fetchSettlementMetadata(page);
   const snapshots: OISnapshot[] = [];
   for (const expiry of expiries) {
@@ -215,6 +277,10 @@ export async function fetchAllExpiryOptions(
     } catch {
       // Keep the expiry fail-closed; a missing expiry must not become a zero-OI wall.
     }
+  }
+  const snapshotsWithOi = snapshots.filter((snapshot) => snapshot.strikes.some((strike) => strike.callOpenInterest != null || strike.putOpenInterest != null));
+  if (snapshotsWithOi.length === 0) {
+    throw new Error(`CME settlement returned no usable OI for ${snapshots.length}/${expiries.length} Gold expiries; refusing to publish a stale OI refresh`);
   }
   return snapshots;
 }
