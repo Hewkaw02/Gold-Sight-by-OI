@@ -2,10 +2,9 @@ name: Refresh Gold Sight price data
 
 on:
   schedule:
-    # Keep the 15-minute cadence but offset it from common quarter-hour marks
-    # to reduce GitHub Actions scheduler congestion.
+    # Price refresh is source-time independent. Keep the 15-minute cadence,
+    # offset from common quarter-hour marks, and use UTC for predictable scheduling.
     - cron: "7,22,37,52 * * * 1-5"
-      timezone: "America/Chicago"
   workflow_dispatch:
 
 permissions:
