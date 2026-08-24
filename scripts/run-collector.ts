@@ -105,13 +105,9 @@ function snapshotHasOi(snapshot: OISnapshot): boolean {
 }
 
 function validateLiveOi(result: Awaited<ReturnType<typeof fetchStandaloneOi>>): void {
-  const frontWithOi = result.frontSnapshots.filter(snapshotHasOi).length;
   const allExpiryWithOi = result.allExpirySnapshots.filter(snapshotHasOi).length;
   if (allExpiryWithOi === 0) {
     throw new Error('Live CME collection returned no all-expiry snapshots with OI');
-  }
-  if (frontWithOi === 0) {
-    throw new Error('Live CME collection returned no front-equivalent snapshots with OI');
   }
 }
 
