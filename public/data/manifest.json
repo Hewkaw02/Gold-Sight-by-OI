@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-21T09:11:47.466Z",
+  "symbol": "GC",
+  "priceTimeframes": [
+    "4H",
+    "1D"
+  ],
+  "displayTimezone": "Asia/Bangkok",
+  "cmeTimezone": "America/Chicago",
+  "coverage": {
+    "price": {
+      "start": "2023-08-15T22:00:00Z",
+      "end": "2026-08-20T22:00:00Z"
+    },
+    "oi": {
+      "start": "2026-07-14",
+      "end": "2026-08-21"
+    },
+    "oiExpiry": {
+      "start": "2026-07-28",
+      "end": "2032-05-25"
+    }
+  },
+  "datasets": {
+    "price_1d": {
+      "path": "price/GC/1d/latest.json",
+      "schemaVersion": 1,
+      "generatedAt": "2026-08-21T09:11:47.466Z",
+      "coverageStart": "2023-08-15",
+      "coverageEnd": "2026-08-20",
+      "rowCount": 769,
+      "sha256": "ff9854721f9219f0234027ab61d09e8e7cb3293cd465a2600a281d9d4e2f0c1e",
+      "freshness": "fresh"
+    },
+    "price_4h": {
+      "path": "price/GC/4h/latest.json",
+      "schemaVersion": 1,
+      "generatedAt": "2026-08-21T09:11:47.466Z",
+      "coverageStart": "2023-08-16",
+      "coverageEnd": "2026-08-21",
+      "rowCount": 4565,
+      "sha256": "0be0b2235695001587507e4be2ef99cd024857938b12c4b225480113fd08c4ff",
+      "freshness": "fresh"
+    },
+    "oi_walls": {
+      "path": "walls/GC/latest.json",
+      "schemaVersion": 1,
+      "generatedAt": "2026-08-21T09:11:47.466Z",
+      "coverageStart": "2026-07-14",
+      "coverageEnd": "2026-08-07",
+      "rowCount": 374,
+      "sha256": "38b6f9b607b1354ed68a393e6fb35dea701d61ee3f1dbd20c346b361e45374c5",
+      "freshness": "stale"
+    },
+    "oi_front": {
+      "path": "oi/GC/latest.json",
+      "schemaVersion": 1,
+      "generatedAt": "2026-08-21T09:11:47.466Z",
+      "coverageStart": "2026-07-14",
+      "coverageEnd": "2026-08-07",
+      "rowCount": 1915,
+      "sha256": "8ed2f47bb9781f3bd4dcfccd89abb2734ccd4b39705bada94a272c4f9be12c2a",
+      "freshness": "stale"
+    },
+    "oi_all_expiries": {
+      "path": "oi/GC/all-expiries-latest.json",
+      "schemaVersion": 1,
+      "generatedAt": "2026-08-21T09:11:47.466Z",
+      "coverageStart": "2026-07-14",
+      "coverageEnd": "2026-08-21",
+      "rowCount": 457,
+      "sha256": "d900bef5da0e4ca2fc3ea3bb9b54b64422461cee230b9715d474b155948dc2ad",
+      "freshness": "stale"
+    },
+    "oi_walls_all_expiries": {
+      "path": "walls/GC/all-expiries-latest.json",
+      "schemaVersion": 1,
+      "generatedAt": "2026-08-21T09:11:47.466Z",
+      "coverageStart": "2026-07-14",
+      "coverageEnd": "2026-08-21",
+      "rowCount": 237,
+      "sha256": "2ae864b0553b5ce640b517efd73672feb9b28bf943e675567b39788db82a5d6d",
+      "freshness": "stale"
+    },
+    "oi_dominance_outlook": {
+      "path": "oi/GC/dominance-outlook.json",
+      "schemaVersion": 1,
+      "generatedAt": "2026-08-21T09:11:47.466Z",
+      "coverageStart": "2026-08-21",
+      "coverageEnd": "2026-10-27",
+      "rowCount": 68,
+      "sha256": "116e7bfb3292ee457935b22886daf8ae1da041d8b691c3f6417a1dd30abb3bc7",
+      "freshness": "stale"
+    },
+    "options_prediction": {
+      "path": "prediction/GC/latest.json",
+      "schemaVersion": 1,
+      "generatedAt": "2026-08-21T09:11:47.466Z",
+      "coverageStart": "2026-08-21",
+      "coverageEnd": "2026-08-26",
+      "rowCount": 180,
+      "sha256": "758857447088390e514890f6db5f2f6843d050ecb516f6b986a342d35a81be9e",
+      "freshness": "stale"
+    },
+    "rolls": {
+      "path": "rolls/GC/latest.json",
+      "schemaVersion": 1,
+      "generatedAt": "2026-08-21T09:11:47.466Z",
+      "coverageStart": "2026-08-03",
+      "coverageEnd": "2026-08-09",
+      "rowCount": 2,
+      "sha256": "8c89fbc24b7848c5183e4f29d67f24b8622597963c67a2e91bce0ac2e180077d",
+      "freshness": "fresh"
+    }
+  },
+  "health": {
+    "state": "partial",
+    "generatedAt": "2026-08-21T09:11:47.462Z",
+    "lastSuccessAt": "2026-08-21T06:15:59.189Z",
+    "lastAttemptAt": "2026-08-21T09:11:22.968Z",
+    "stale": true,
+    "partial": true,
+    "auth": {
+      "state": "ok",
+      "checkedAt": "2026-08-21T06:15:59.189Z",
+      "message": "CME session verified during live OI collection"
+    },
+    "price": {
+      "state": "ok",
+      "lastSuccessAt": "2026-08-21T09:11:47.462Z",
+      "message": "Latest closed price bars · 1D 2026-08-20T22:00:00Z · 4H 2026-08-21T06:00:00Z · fresh"
+    },
+    "oi": {
+      "state": "stale",
+      "lastSuccessAt": "2026-08-21T06:15:59.191Z",
+      "message": "1915 front-equivalent snapshots; 457 all-expiry snapshots; OI as-of 2026-08-06 (11 business-day lag); expiry 2026-07-28 → 2032-05-25"
+    },
+    "notes": [
+      "Standalone CME collector; no external project is used at runtime.",
+      "Failed collectors preserve the last successful dataset."
+    ]
+  }
+}

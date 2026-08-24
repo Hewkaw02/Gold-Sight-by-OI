@@ -1,0 +1,97 @@
+services:
+  dashboard:
+    pull_policy: build
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: gold-sight-by-oi:latest
+    ports:
+      - "${DASHBOARD_PORT:-8080}:80"
+    volumes:
+      # Serve the host's normalized JSON so a collector refresh is visible
+      # without rebuilding the dashboard image.
+      - ./public/data:/usr/share/nginx/html/data:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1/healthz"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+  collector:
+    profiles: ["collector"]
+    pull_policy: build
+    build:
+      context: .
+      dockerfile: Dockerfile.collector
+    image: gold-sight-by-oi-collector:latest
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      GOLD_SIGHT_DATA_ROOT: /app/public/data
+      GOLD_SIGHT_SYMBOL: GC
+      CME_STORAGE_STATE_PATH: /app/runtime/cme-storage-state.json
+      TV_SOURCE_SYMBOL: GOLD.F
+      TV_SOURCE_EXCHANGE: BLACKBULL
+      TV_SOURCE_TIMEZONE: America/Chicago
+      PRICE_TIMEFRAMES: 4H,1D
+      OI_TARGET_DTES: 7,15,30,60,90
+      OI_SESSION_SLOTS: open,mid,close
+      RUN_LIVE_OI: "${RUN_LIVE_OI:-false}"
+      DISPLAY_TIMEZONE: Asia/Bangkok
+      CME_TIMEZONE: America/Chicago
+      PRICE_1D_MAX_AGE_HOURS: "72"
+      PRICE_4H_MAX_AGE_HOURS: "12"
+      OI_MAX_BUSINESS_DAY_LAG: "2"
+      PYTHON_BIN: python3
+    volumes:
+      - ./public/data:/app/public/data
+      - ./runtime:/app/runtime
+    command: ["npm", "run", "collector:run"]
+
+  scheduler:
+    pull_policy: build
+    build:
+      context: .
+      dockerfile: Dockerfile.collector
+    image: gold-sight-by-oi-collector:latest
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      GOLD_SIGHT_DATA_ROOT: /app/public/data
+      GOLD_SIGHT_SYMBOL: GC
+      CME_STORAGE_STATE_PATH: /app/runtime/cme-storage-state.json
+      TV_SOURCE_SYMBOL: GOLD.F
+      TV_SOURCE_EXCHANGE: BLACKBULL
+      TV_SOURCE_TIMEZONE: America/Chicago
+      PRICE_TIMEFRAMES: 4H,1D
+      OI_TARGET_DTES: 7,15,30,60,90
+      DISPLAY_TIMEZONE: Asia/Bangkok
+      CME_TIMEZONE: America/Chicago
+      PRICE_1D_MAX_AGE_HOURS: "72"
+      PRICE_4H_MAX_AGE_HOURS: "12"
+      OI_MAX_BUSINESS_DAY_LAG: "2"
+      PYTHON_BIN: python3
+      SCHEDULER_TIMEZONE: "${SCHEDULER_TIMEZONE:-America/Chicago}"
+      SCHEDULER_PRICE_INTERVAL_MINUTES: "${SCHEDULER_PRICE_INTERVAL_MINUTES:-15}"
+      SCHEDULER_TICK_SECONDS: "${SCHEDULER_TICK_SECONDS:-30}"
+      SCHEDULER_RUN_PRICE_ON_START: "${SCHEDULER_RUN_PRICE_ON_START:-true}"
+      SCHEDULER_RUN_OI_ON_START: "${SCHEDULER_RUN_OI_ON_START:-true}"
+      SCHEDULER_STARTUP_OI_SLOT: "${SCHEDULER_STARTUP_OI_SLOT:-close}"
+      SCHEDULER_PRICE_RETRIES: "${SCHEDULER_PRICE_RETRIES:-2}"
+      SCHEDULER_RETRY_DELAY_SECONDS: "${SCHEDULER_RETRY_DELAY_SECONDS:-20}"
+      SCHEDULER_OI_SCHEDULE: "${SCHEDULER_OI_SCHEDULE:-07:50:open,09:55:mid,12:20:close}"
+      SCHEDULER_RUNTIME_ROOT: /app/runtime
+    volumes:
+      - ./public/data:/app/public/data
+      - ./runtime:/app/runtime
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "const fs=require('fs');const p='/app/runtime/scheduler/heartbeat.json';if(!fs.existsSync(p)||Date.now()-fs.statSync(p).mtimeMs>120000)process.exit(1)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    command: ["npm", "run", "scheduler"]

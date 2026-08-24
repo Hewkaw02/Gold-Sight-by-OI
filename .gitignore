@@ -1,0 +1,51 @@
+# Dependencies and build output
+node_modules/
+dist/
+.vite/
+coverage/
+.cache/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+config/cme-cookies.json
+cme-storage-state.json
+*.storage.json
+*.session.json
+
+# Collector and browser runtime state
+collector-runtime/
+private-data/
+output/
+.playwright-cli/
+runtime/
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# Logs, temporary files, and local tooling artifacts
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tmp
+*.temp
+*.bak
+
+# Operating-system and editor metadata
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# The dashboard's normalized JSON is intentional source data.
+# Keep this explicit so future broad rules do not hide GitHub Pages data.
+!public/data/
+!public/data/**
