@@ -190,12 +190,14 @@ export default function App() {
   }, [manifest]);
 
   const chartWindowLabel = useMemo(() => {
-    const latestTime = (data?.price ?? []).filter((bar) => bar.isClosed).reduce((latest, bar) => {
-      const time = Date.parse(bar.time);
-      return Number.isFinite(time) ? Math.max(latest, time) : latest;
+    const latestCloseTime = (data?.price ?? []).filter((bar) => bar.isClosed).reduce((latest, bar) => {
+      // `bar.time` is the opening timestamp. Use the closing timestamp for
+      // the visible window so the label matches the dataset coverage date.
+      const closeTime = Date.parse(bar.closeTime || bar.time);
+      return Number.isFinite(closeTime) ? Math.max(latest, closeTime) : latest;
     }, Number.NEGATIVE_INFINITY);
-    if (!Number.isFinite(latestTime)) return '— → —';
-    const latestDate = new Date(latestTime);
+    if (!Number.isFinite(latestCloseTime)) return '— → —';
+    const latestDate = new Date(latestCloseTime);
     return `${latestDate.getUTCFullYear()}-06-01 → ${latestDate.toISOString().slice(0, 10)}`;
   }, [data]);
 
