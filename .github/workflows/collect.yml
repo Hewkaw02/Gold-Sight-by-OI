@@ -25,7 +25,10 @@ concurrency:
 
 jobs:
   collect:
-    runs-on: [self-hosted, Windows, gold-sight]
+    # Use a fresh GitHub-hosted Windows VM so no local self-hosted runner is required.
+    # CME credentials are supplied as repository secrets and the browser session is
+    # recreated for each run.
+    runs-on: windows-latest
     timeout-minutes: 45
     env:
       GOLD_SIGHT_DATA_ROOT: public/data
@@ -54,6 +57,13 @@ jobs:
 
       - name: Install Node dependencies
         run: npm ci
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: collector/price/requirements.txt
 
       - name: Install Camoufox browser
         run: npx camoufox-js fetch
