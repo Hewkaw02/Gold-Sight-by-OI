@@ -26,9 +26,10 @@ concurrency:
 jobs:
   collect:
     # Use a fresh GitHub-hosted Windows VM so no local self-hosted runner is required.
+    # Pin Windows 2022 because better-sqlite3 needs the compatible VS 2022 toolchain.
     # CME credentials are supplied as repository secrets and the browser session is
     # recreated for each run.
-    runs-on: windows-latest
+    runs-on: windows-2022
     timeout-minutes: 45
     env:
       GOLD_SIGHT_DATA_ROOT: public/data
