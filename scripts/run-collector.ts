@@ -1,12 +1,12 @@
 import { spawn } from 'node:child_process';
 import path from 'node:path';
-import { mkdir } from 'node:fs/promises';
+import { mkdir, readdir } from 'node:fs/promises';
 import { fetchStandaloneOi } from '../collector/cme/standalone-oi-collector.js';
 import { CmeSessionError } from '../collector/cme/cme-browser.js';
 import { FRONT_TARGET_DTES } from '../src/domain/front-equivalent.js';
 import { buildOptionsPrediction } from '../src/domain/options-prediction.js';
 import { buildDominanceOutlook } from '../collector/oi/dominance-projection.js';
-import { extendFrontEquivalent } from '../collector/oi/front-equivalent.js';
+import { dedupeOiSnapshots, extendFrontEquivalent } from '../collector/oi/front-equivalent.js';
 import { deriveWalls, summarizeSnapshotHealth } from '../collector/oi/oi-wall-engine.js';
 import { mergeByKey, readJson, sha256Json, writeJsonAtomic } from '../collector/shared/json-store.js';
 import { latestClosedPriceBar, mergePriceBars } from '../collector/shared/price-bars.js';
@@ -148,6 +148,50 @@ async function writeOiPartitions(front: OISnapshot[], allExpiry: OISnapshot[]) {
   }
 }
 
+export async function loadAllExpirySnapshotsFromPartitions(dataRoot: string, symbol: string): Promise<OISnapshot[]> {
+  const allExpiryDir = path.join(dataRoot, 'oi', symbol, 'all-expiry');
+  try {
+    const entries = await readdir(allExpiryDir);
+    const jsonFiles = entries.filter((file) => file.endsWith('.json')).sort();
+    const allSnapshots: OISnapshot[] = [];
+    for (const file of jsonFiles) {
+      const fileSnapshots = await readJson<OISnapshot[]>(path.join(allExpiryDir, file), []);
+      allSnapshots.push(...fileSnapshots);
+    }
+    return dedupeOiSnapshots(allSnapshots);
+  } catch {
+    return [];
+  }
+}
+
+export async function loadFrontSnapshotsFromPartitions(dataRoot: string, symbol: string): Promise<OISnapshot[]> {
+  const symbolDir = path.join(dataRoot, 'oi', symbol);
+  try {
+    const entries = await readdir(symbolDir, { withFileTypes: true });
+    const dateDirs = entries.filter((entry) => entry.isDirectory() && /^\d{4}-\d{2}-\d{2}$/.test(entry.name)).map((entry) => entry.name).sort();
+    const allSnapshots: OISnapshot[] = [];
+    for (const dateDir of dateDirs) {
+      const dirPath = path.join(symbolDir, dateDir);
+      const files = (await readdir(dirPath)).filter((file) => file.endsWith('.json'));
+      for (const file of files) {
+        const snapshot = await readJson<OISnapshot | null>(path.join(dirPath, file), null);
+        if (snapshot) allSnapshots.push(snapshot);
+      }
+    }
+    return dedupeOiSnapshots(allSnapshots);
+  } catch {
+    return [];
+  }
+}
+
+export function latestRepresentativeSnapshots(snapshots: OISnapshot[]): OISnapshot[] {
+  if (snapshots.length === 0) return [];
+  const latestDate = snapshots.map((s) => s.tradeDate).filter(Boolean).sort().at(-1);
+  if (!latestDate) return snapshots;
+  const latestDaySnapshots = snapshots.filter((s) => s.tradeDate === latestDate);
+  return latestDaySnapshots.length > 0 ? latestDaySnapshots : snapshots;
+}
+
 async function currentHealth(): Promise<DashboardHealth> {
   const manifest = await readJson<DataManifest | null>(path.join(dataRoot, 'manifest.json'), null);
   const status = await readJson<Partial<DashboardHealth> | null>(path.join(dataRoot, 'status', 'latest.json'), null);
@@ -251,20 +295,23 @@ async function main() {
     }
   }
 
+  const historicalFront = await loadFrontSnapshotsFromPartitions(dataRoot, symbol);
+  const historicalAll = await loadAllExpirySnapshotsFromPartitions(dataRoot, symbol);
+
   let snapshots: OISnapshot[];
   let allExpirySnapshots: OISnapshot[];
   let walls: unknown[];
   let allExpiryWalls: unknown[];
   if (liveOi) {
-    const existingFront = await readJson<OISnapshot[]>(path.join(dataRoot, 'oi', symbol, 'latest.json'), []);
-    const existingAll = await readJson<OISnapshot[]>(path.join(dataRoot, 'oi', symbol, 'all-expiries-latest.json'), []);
-    snapshots = mergeByKey(existingFront, liveOi.frontSnapshots, (snapshot) => snapshot.snapshotId).sort((a, b) => a.fetchedAt.localeCompare(b.fetchedAt));
-    allExpirySnapshots = mergeByKey(existingAll, liveOi.allExpirySnapshots, (snapshot) => snapshot.snapshotId).sort((a, b) => a.fetchedAt.localeCompare(b.fetchedAt));
     const targetDtes = frontTargetDtes();
-    snapshots = extendFrontEquivalent(snapshots, allExpirySnapshots, targetDtes);
-    await writeJsonAtomic(path.join(dataRoot, 'oi', symbol, 'latest.json'), snapshots);
-    await writeJsonAtomic(path.join(dataRoot, 'oi', symbol, 'all-expiries-latest.json'), allExpirySnapshots);
     await writeOiPartitions(extendFrontEquivalent(liveOi.frontSnapshots, liveOi.allExpirySnapshots, targetDtes), liveOi.allExpirySnapshots);
+    snapshots = dedupeOiSnapshots([...historicalFront, ...liveOi.frontSnapshots]).sort((a, b) => a.fetchedAt.localeCompare(b.fetchedAt));
+    allExpirySnapshots = dedupeOiSnapshots([...historicalAll, ...liveOi.allExpirySnapshots]).sort((a, b) => a.fetchedAt.localeCompare(b.fetchedAt));
+    snapshots = extendFrontEquivalent(snapshots, allExpirySnapshots, targetDtes);
+    const latestFront = latestRepresentativeSnapshots(snapshots);
+    const latestAll = latestRepresentativeSnapshots(allExpirySnapshots);
+    await writeJsonAtomic(path.join(dataRoot, 'oi', symbol, 'latest.json'), latestFront.length > 0 ? latestFront : snapshots);
+    await writeJsonAtomic(path.join(dataRoot, 'oi', symbol, 'all-expiries-latest.json'), latestAll.length > 0 ? latestAll : allExpirySnapshots);
     const endAt = latestClosedPriceBar(price4h)?.closeTime ?? new Date().toISOString();
     const wallOptions = { p90Quantile: Number(process.env.OI_P90_QUANTILE ?? 0.9), maxGapTradingSessions: Number(process.env.OI_MAX_GAP_TRADING_SESSIONS ?? 2), endAt };
     walls = deriveWalls(snapshots, wallOptions);
@@ -272,10 +319,22 @@ async function main() {
     await writeJsonAtomic(path.join(dataRoot, 'walls', symbol, 'latest.json'), walls);
     await writeJsonAtomic(path.join(dataRoot, 'walls', symbol, 'all-expiries-latest.json'), allExpiryWalls);
   } else {
-    snapshots = await readJson<OISnapshot[]>(path.join(dataRoot, 'oi', symbol, 'latest.json'), []);
-    allExpirySnapshots = await readJson<OISnapshot[]>(path.join(dataRoot, 'oi', symbol, 'all-expiries-latest.json'), []);
+    snapshots = historicalFront.length > 0
+      ? historicalFront
+      : await readJson<OISnapshot[]>(path.join(dataRoot, 'oi', symbol, 'latest.json'), []);
+    allExpirySnapshots = historicalAll.length > 0
+      ? historicalAll
+      : await readJson<OISnapshot[]>(path.join(dataRoot, 'oi', symbol, 'all-expiries-latest.json'), []);
     walls = await readJson<unknown[]>(path.join(dataRoot, 'walls', symbol, 'latest.json'), []);
     allExpiryWalls = await readJson<unknown[]>(path.join(dataRoot, 'walls', symbol, 'all-expiries-latest.json'), []);
+    if ((walls as unknown[]).length === 0 && snapshots.length > 0) {
+      const endAt = latestClosedPriceBar(price4h)?.closeTime ?? new Date().toISOString();
+      const wallOptions = { p90Quantile: Number(process.env.OI_P90_QUANTILE ?? 0.9), maxGapTradingSessions: Number(process.env.OI_MAX_GAP_TRADING_SESSIONS ?? 2), endAt };
+      walls = deriveWalls(snapshots, wallOptions);
+      allExpiryWalls = deriveWalls(allExpirySnapshots, wallOptions);
+      await writeJsonAtomic(path.join(dataRoot, 'walls', symbol, 'latest.json'), walls);
+      await writeJsonAtomic(path.join(dataRoot, 'walls', symbol, 'all-expiries-latest.json'), allExpiryWalls);
+    }
   }
 
   const latestClosed4h = latestClosedPriceBar(price4h);

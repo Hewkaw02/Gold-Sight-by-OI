@@ -7,6 +7,11 @@ import { buildOptionsPrediction } from '../src/domain/options-prediction.js';
 import { latestClosedPriceBar } from '../collector/shared/price-bars.js';
 import { oiFreshness, priceFreshness } from '../collector/shared/data-freshness.js';
 import { readJson, sha256Json, writeJsonAtomic } from '../collector/shared/json-store.js';
+import {
+  latestRepresentativeSnapshots,
+  loadAllExpirySnapshotsFromPartitions,
+  loadFrontSnapshotsFromPartitions,
+} from './run-collector.js';
 import type { DataManifest, DashboardHealth, OISnapshot, PriceBar, RollMarker } from '../src/domain/types.js';
 
 const symbol = process.env.GOLD_SIGHT_SYMBOL ?? 'GC';
@@ -19,8 +24,14 @@ function localizeSnapshot(snapshot: OISnapshot): OISnapshot {
 }
 
 async function main() {
-  const storedFront = dedupeOiSnapshots((await readJson<OISnapshot[]>(path.join(dataRoot, 'oi', symbol, 'latest.json'), [])).map(localizeSnapshot));
-  const allExpiry = dedupeOiSnapshots((await readJson<OISnapshot[]>(path.join(dataRoot, 'oi', symbol, 'all-expiries-latest.json'), [])).map(localizeSnapshot));
+  let storedFront = (await loadFrontSnapshotsFromPartitions(dataRoot, symbol)).map(localizeSnapshot);
+  let allExpiry = (await loadAllExpirySnapshotsFromPartitions(dataRoot, symbol)).map(localizeSnapshot);
+  if (storedFront.length === 0) {
+    storedFront = dedupeOiSnapshots((await readJson<OISnapshot[]>(path.join(dataRoot, 'oi', symbol, 'latest.json'), [])).map(localizeSnapshot));
+  }
+  if (allExpiry.length === 0) {
+    allExpiry = dedupeOiSnapshots((await readJson<OISnapshot[]>(path.join(dataRoot, 'oi', symbol, 'all-expiries-latest.json'), [])).map(localizeSnapshot));
+  }
   if (storedFront.length === 0) throw new Error('No local front OI snapshots found under public/data');
   const front = extendFrontEquivalent(storedFront, allExpiry, FRONT_TARGET_DTES);
 
@@ -38,8 +49,10 @@ async function main() {
   };
   const walls = deriveWalls(front, wallOptions);
   const allExpiryWalls = deriveWalls(allExpiry, wallOptions);
-  await writeJsonAtomic(path.join(dataRoot, 'oi', symbol, 'latest.json'), front);
-  await writeJsonAtomic(path.join(dataRoot, 'oi', symbol, 'all-expiries-latest.json'), allExpiry);
+  const latestFront = latestRepresentativeSnapshots(front);
+  const latestAll = latestRepresentativeSnapshots(allExpiry);
+  await writeJsonAtomic(path.join(dataRoot, 'oi', symbol, 'latest.json'), latestFront);
+  await writeJsonAtomic(path.join(dataRoot, 'oi', symbol, 'all-expiries-latest.json'), latestAll);
   await writeJsonAtomic(path.join(dataRoot, 'walls', symbol, 'latest.json'), walls);
   await writeJsonAtomic(path.join(dataRoot, 'walls', symbol, 'all-expiries-latest.json'), allExpiryWalls);
   await writeJsonAtomic(path.join(dataRoot, 'oi', symbol, 'dominance-outlook.json'), dominanceOutlook);

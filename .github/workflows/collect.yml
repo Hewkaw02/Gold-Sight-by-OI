@@ -2,18 +2,22 @@ name: Collect Gold Sight data
 
 on:
   schedule:
-    - cron: "50 7 * * 1-5"
-      timezone: "America/Chicago"
-    - cron: "55 9 * * 1-5"
-      timezone: "America/Chicago"
-    - cron: "20 12 * * 1-5"
-      timezone: "America/Chicago"
+    # GitHub Actions cron runs strictly in UTC.
+    # Targeted CME sessions (America/Chicago UTC-5 in Daylight Saving Time):
+    # - 12:50 UTC (07:50 CDT) - CME Market Open
+    # - 14:55 UTC (09:55 CDT) - CME Market Mid
+    # - 17:20 UTC (12:20 CDT) - CME Market Close / Settlements start
+    # - 23:00 UTC (18:00 CDT) - CME Post-Settlement EOD options
+    - cron: "50 12 * * 1-5"
+    - cron: "55 14 * * 1-5"
+    - cron: "20 17 * * 1-5"
+    - cron: "0 23 * * 1-5"
   workflow_dispatch:
     inputs:
       run_oi:
         description: "Run CME Vol2Vol tenor collection"
         required: false
-        default: "false"
+        default: "true"
         type: boolean
 
 permissions:
@@ -78,13 +82,14 @@ jobs:
         env:
           EVENT_SCHEDULE: ${{ github.event.schedule }}
           MANUAL_RUN_OI: ${{ inputs.run_oi }}
+          EVENT_NAME: ${{ github.event_name }}
         run: |
-          $isOi = ($env:MANUAL_RUN_OI -eq 'true') -or ($env:EVENT_SCHEDULE -in @('50 7 * * 1-5', '55 9 * * 1-5', '20 12 * * 1-5'))
+          $isOi = ($env:EVENT_NAME -eq 'schedule') -or ($env:MANUAL_RUN_OI -eq 'true') -or ($env:MANUAL_RUN_OI -eq '$true')
           if ($isOi) {
             "RUN_LIVE_OI=true" >> $env:GITHUB_ENV
-            if ($env:EVENT_SCHEDULE -eq '50 7 * * 1-5') { "OI_SESSION_SLOTS=open" >> $env:GITHUB_ENV }
-            elseif ($env:EVENT_SCHEDULE -eq '55 9 * * 1-5') { "OI_SESSION_SLOTS=mid" >> $env:GITHUB_ENV }
-            elseif ($env:EVENT_SCHEDULE -eq '20 12 * * 1-5') { "OI_SESSION_SLOTS=close" >> $env:GITHUB_ENV }
+            if ($env:EVENT_SCHEDULE -eq '50 12 * * 1-5') { "OI_SESSION_SLOTS=open" >> $env:GITHUB_ENV }
+            elseif ($env:EVENT_SCHEDULE -eq '55 14 * * 1-5') { "OI_SESSION_SLOTS=mid" >> $env:GITHUB_ENV }
+            elseif ($env:EVENT_SCHEDULE -eq '20 17 * * 1-5') { "OI_SESSION_SLOTS=close" >> $env:GITHUB_ENV }
             else { "OI_SESSION_SLOTS=close" >> $env:GITHUB_ENV }
           } else {
             "RUN_LIVE_OI=false" >> $env:GITHUB_ENV
@@ -138,4 +143,5 @@ jobs:
             exit 0
           }
           git commit -m "data: refresh GC price and OI snapshots"
+          git pull --rebase origin ${{ github.ref_name }}
           git push origin HEAD:${{ github.ref_name }}
