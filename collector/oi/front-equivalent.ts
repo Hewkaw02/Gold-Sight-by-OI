@@ -66,19 +66,19 @@ export function extendFrontEquivalent(
     .filter((targetDte) => Number.isInteger(targetDte) && targetDte > 0)
     .sort((a, b) => a - b);
   const maxTargetDte = sortedTargetDtes.at(-1);
-  const nativeCutoff = Math.max(...FRONT_CORE_DTES);
-  if (maxTargetDte == null || maxTargetDte <= nativeCutoff) return frontSnapshots;
+  if (maxTargetDte == null) return frontSnapshots;
 
-  const retainedFront = dedupeOiSnapshots(frontSnapshots).map((snapshot) => snapshot.targetDte > nativeCutoff
-    ? { ...snapshot, strikes: nearMarketStrikes(snapshot) }
-    : snapshot);
+  const retainedFront = dedupeOiSnapshots(frontSnapshots).map((snapshot) => ({
+    ...snapshot,
+    strikes: nearMarketStrikes(snapshot),
+  }));
   const existing = new Set(retainedFront.map(snapshotKey));
   const supplements = allExpirySnapshots.flatMap((snapshot) => {
     const actualDte = Math.max(0, Math.round(snapshot.actualDte));
-    if (actualDte <= nativeCutoff || actualDte > maxTargetDte) return [];
+    if (actualDte <= 0 || actualDte > maxTargetDte) return [];
     if (existing.has(snapshotKey(snapshot))) return [];
     const targetDte = targetForActualDte(actualDte, sortedTargetDtes);
-    if (targetDte == null || targetDte <= nativeCutoff) return [];
+    if (targetDte == null) return [];
     const strikes = nearMarketStrikes(snapshot);
     if (!strikes.some((strike) => strike.callOpenInterest != null || strike.putOpenInterest != null)) return [];
     existing.add(snapshotKey(snapshot));
