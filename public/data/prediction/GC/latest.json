@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "symbol": "GC",
-  "generatedAt": "2026-11-25T16:10:13.153Z",
+  "generatedAt": "2026-11-25T22:06:06.537Z",
   "asOfDate": "2026-11-25",
-  "underlyingPrice": 3470.18,
+  "underlyingPrice": 3536.13,
   "method": "black-76-horizon-oi",
   "assumptions": {
     "riskFreeRate": 0.04,
@@ -16,210 +16,209 @@
   "quality": {
     "snapshotCount": 30,
     "activeExpiryCount": 3,
-    "strikeCount": 1655,
-    "strikesWithOi": 1655,
+    "strikeCount": 1660,
+    "strikesWithOi": 1660,
     "strikesWithObservedVol": 0,
     "observedVolCoverage": 0,
     "fallbackVolatility": 0.24,
-    "latestOiDate": "2026-11-24",
+    "latestOiDate": "2026-11-25",
     "warnings": [
       "Predictive Greeks and composite pain use expiries within 90 calendar days; farther expiries remain available in the expiry inventory.",
-      "Some or most active expiries use fallback median volatility because all-expiry IV is unavailable.",
-      "Price reference is 1 days newer than the latest OI snapshot."
+      "Some or most active expiries use fallback median volatility because all-expiry IV is unavailable."
     ]
   },
   "maxPain": {
-    "compositeStrike": 4000,
-    "compositeValue": 1516615500,
+    "compositeStrike": 3950,
+    "compositeValue": 1576389500,
     "nearestExpiry": "2026-12-28",
     "nearestStrike": 3900,
     "byExpiry": [
       {
         "expiryDate": "2026-12-28",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 33,
         "strikeCount": 611,
-        "oiContracts": 127299,
+        "oiContracts": 132898,
         "observedVolCoverage": 0,
         "maxPainStrike": 3900,
-        "maxPainValue": 485713500,
-        "netGammaExposure": -273756389.64210457,
-        "netVannaExposure": -4349942.139142768
+        "maxPainValue": 511692500,
+        "netGammaExposure": -252215061.1176757,
+        "netVannaExposure": 30322829.60331379
       },
       {
         "expiryDate": "2027-01-26",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 62,
-        "strikeCount": 575,
-        "oiContracts": 141200,
+        "strikeCount": 576,
+        "oiContracts": 145280,
         "observedVolCoverage": 0,
         "maxPainStrike": 4000,
-        "maxPainValue": 786905500,
-        "netGammaExposure": -203855515.40433556,
-        "netVannaExposure": 5757913.514173365
+        "maxPainValue": 807929000,
+        "netGammaExposure": -184934829.82050833,
+        "netVannaExposure": 38678315.57811888
       },
       {
         "expiryDate": "2027-02-23",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 90,
-        "strikeCount": 469,
-        "oiContracts": 61934,
+        "strikeCount": 473,
+        "oiContracts": 63508,
         "observedVolCoverage": 0,
-        "maxPainStrike": 4100,
-        "maxPainValue": 221406500,
-        "netGammaExposure": -68543125.63289118,
-        "netVannaExposure": 14266439.84066817
+        "maxPainStrike": 4050,
+        "maxPainValue": 229155000,
+        "netGammaExposure": -53780799.22436818,
+        "netVannaExposure": 31789892.385529537
       },
       {
         "expiryDate": "2027-03-24",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 119,
-        "strikeCount": 440,
-        "oiContracts": 69887,
+        "strikeCount": 441,
+        "oiContracts": 72452,
         "observedVolCoverage": 0,
-        "maxPainStrike": 4185,
-        "maxPainValue": 161253000,
-        "netGammaExposure": -123612777.01981834,
-        "netVannaExposure": 8224111.559824843
+        "maxPainStrike": 4145,
+        "maxPainValue": 181758000,
+        "netGammaExposure": -109547035.00941865,
+        "netVannaExposure": 33539495.619749486
       },
       {
         "expiryDate": "2027-04-27",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 153,
-        "strikeCount": 239,
-        "oiContracts": 10290,
+        "strikeCount": 243,
+        "oiContracts": 10751,
         "observedVolCoverage": 0,
         "maxPainStrike": 4300,
-        "maxPainValue": 51189000,
-        "netGammaExposure": -29909166.742896646,
-        "netVannaExposure": -2468107.2415641425
+        "maxPainValue": 54088000,
+        "netGammaExposure": -30021184.687285013,
+        "netVannaExposure": 1268159.0961826248
       },
       {
         "expiryDate": "2027-05-25",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 181,
-        "strikeCount": 265,
-        "oiContracts": 43936,
+        "strikeCount": 286,
+        "oiContracts": 44316,
         "observedVolCoverage": 0,
-        "maxPainStrike": 4300,
-        "maxPainValue": 135323000,
-        "netGammaExposure": -69842428.13400371,
-        "netVannaExposure": 1813437.2455711002
+        "maxPainStrike": 4285,
+        "maxPainValue": 143168000,
+        "netGammaExposure": -71956460.54681358,
+        "netVannaExposure": 10454747.876708718
       },
       {
         "expiryDate": "2027-06-24",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 211,
-        "strikeCount": 140,
-        "oiContracts": 12215,
+        "strikeCount": 144,
+        "oiContracts": 12274,
         "observedVolCoverage": 0,
         "maxPainStrike": 4085,
         "maxPainValue": 4117000,
-        "netGammaExposure": 11809027.799526665,
-        "netVannaExposure": 22893351.534292508
+        "netGammaExposure": 15377476.004768118,
+        "netVannaExposure": 26632465.49967911
       },
       {
         "expiryDate": "2027-07-27",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 244,
-        "strikeCount": 75,
-        "oiContracts": 3856,
+        "strikeCount": 76,
+        "oiContracts": 3936,
         "observedVolCoverage": 0,
         "maxPainStrike": 4065,
-        "maxPainValue": 7502000,
-        "netGammaExposure": -5588011.005895195,
-        "netVannaExposure": 1464401.6386820893
+        "maxPainValue": 8683000,
+        "netGammaExposure": -5046445.045677352,
+        "netVannaExposure": 2564798.404353974
       },
       {
         "expiryDate": "2027-08-26",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 274,
-        "strikeCount": 42,
-        "oiContracts": 1476,
+        "strikeCount": 43,
+        "oiContracts": 1605,
         "observedVolCoverage": 0,
         "maxPainStrike": 4115,
-        "maxPainValue": 409500,
-        "netGammaExposure": 107684.4606396339,
-        "netVannaExposure": 1194183.3054157982
+        "maxPainValue": 426000,
+        "netGammaExposure": -522702.0531216773,
+        "netVannaExposure": 1453079.8961804484
       },
       {
         "expiryDate": "2027-09-27",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 306,
         "strikeCount": 16,
-        "oiContracts": 480,
+        "oiContracts": 481,
         "observedVolCoverage": 0,
         "maxPainStrike": 4500,
         "maxPainValue": 138500,
-        "netGammaExposure": -1216904.4860231471,
-        "netVannaExposure": -299381.97577930096
+        "netGammaExposure": -1243688.785328492,
+        "netVannaExposure": -176119.28724088636
       },
       {
         "expiryDate": "2027-10-26",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 335,
-        "strikeCount": 8,
-        "oiContracts": 937,
+        "strikeCount": 10,
+        "oiContracts": 969,
         "observedVolCoverage": 0,
         "maxPainStrike": 4350,
-        "maxPainValue": 0,
-        "netGammaExposure": -1094607.5974425743,
-        "netVannaExposure": 62522.620160321705
+        "maxPainValue": 880000,
+        "netGammaExposure": -917323.5841759127,
+        "netVannaExposure": 350898.4926326974
       },
       {
         "expiryDate": "2027-11-23",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 363,
-        "strikeCount": 37,
-        "oiContracts": 6632,
+        "strikeCount": 40,
+        "oiContracts": 6866,
         "observedVolCoverage": 0,
-        "maxPainStrike": 4500,
-        "maxPainValue": 74673000,
-        "netGammaExposure": -5395280.126956585,
-        "netVannaExposure": 5695891.587135046
+        "maxPainStrike": 4470,
+        "maxPainValue": 81858000,
+        "netGammaExposure": -4821651.363935583,
+        "netVannaExposure": 6631171.101475464
       },
       {
         "expiryDate": "2027-12-28",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 398,
         "strikeCount": 5,
         "oiContracts": 5,
         "observedVolCoverage": 0,
         "maxPainStrike": 5000,
         "maxPainValue": 50000,
-        "netGammaExposure": -4145.385916114865,
-        "netVannaExposure": -804.8618358333911
+        "netGammaExposure": -4193.872344525422,
+        "netVannaExposure": -543.9426435605965
       },
       {
         "expiryDate": "2028-01-26",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 427,
         "strikeCount": 2,
         "oiContracts": 15,
         "observedVolCoverage": 0,
         "maxPainStrike": 4400,
         "maxPainValue": 0,
-        "netGammaExposure": -26442.09593180982,
-        "netVannaExposure": -29527.390777025706
+        "netGammaExposure": -28423.124792792052,
+        "netVannaExposure": -29508.485796723104
       },
       {
         "expiryDate": "2028-02-24",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 456,
         "strikeCount": 0,
         "oiContracts": 0,
@@ -239,8 +238,8 @@
         "observedVolCoverage": 0,
         "maxPainStrike": 4400,
         "maxPainValue": 0,
-        "netGammaExposure": -6451.235771704165,
-        "netVannaExposure": -1117.1650304432915
+        "netGammaExposure": -6484.77969443129,
+        "netVannaExposure": -10.606204461266316
       },
       {
         "expiryDate": "2028-04-25",
@@ -252,21 +251,21 @@
         "observedVolCoverage": 0,
         "maxPainStrike": 4500,
         "maxPainValue": 0,
-        "netGammaExposure": -20201.999597213646,
-        "netVannaExposure": -4213.007869046618
+        "netGammaExposure": -20341.57336792195,
+        "netVannaExposure": -770.4519443067547
       },
       {
         "expiryDate": "2028-05-25",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 547,
         "strikeCount": 3,
         "oiContracts": 76,
         "observedVolCoverage": 0,
         "maxPainStrike": 2800,
         "maxPainValue": 0,
-        "netGammaExposure": 7224.255757133593,
-        "netVannaExposure": 182734.77368884825
+        "netGammaExposure": 17226.620759038597,
+        "netVannaExposure": 199474.7311810443
       },
       {
         "expiryDate": "2028-06-27",
@@ -278,13 +277,13 @@
         "observedVolCoverage": 0,
         "maxPainStrike": 4500,
         "maxPainValue": 0,
-        "netGammaExposure": -22098.623499541485,
-        "netVannaExposure": -1155.1233184196317
+        "netGammaExposure": -22055.575173018515,
+        "netVannaExposure": 2953.6261618219723
       },
       {
         "expiryDate": "2028-07-26",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 609,
         "strikeCount": 0,
         "oiContracts": 0,
@@ -296,8 +295,8 @@
       },
       {
         "expiryDate": "2028-08-28",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 642,
         "strikeCount": 0,
         "oiContracts": 0,
@@ -309,8 +308,8 @@
       },
       {
         "expiryDate": "2028-09-26",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 671,
         "strikeCount": 0,
         "oiContracts": 0,
@@ -322,21 +321,21 @@
       },
       {
         "expiryDate": "2028-11-27",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 733,
         "strikeCount": 8,
         "oiContracts": 4235,
         "observedVolCoverage": 0,
         "maxPainStrike": 3720,
         "maxPainValue": 0,
-        "netGammaExposure": -66507.15260741636,
-        "netVannaExposure": 7496981.960003066
+        "netGammaExposure": 242793.25441079223,
+        "netVannaExposure": 8341285.732926247
       },
       {
         "expiryDate": "2029-05-24",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 911,
         "strikeCount": 0,
         "oiContracts": 0,
@@ -348,8 +347,8 @@
       },
       {
         "expiryDate": "2029-11-27",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 1098,
         "strikeCount": 0,
         "oiContracts": 0,
@@ -361,8 +360,8 @@
       },
       {
         "expiryDate": "2030-05-28",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 1280,
         "strikeCount": 0,
         "oiContracts": 0,
@@ -374,8 +373,8 @@
       },
       {
         "expiryDate": "2030-11-25",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 1461,
         "strikeCount": 0,
         "oiContracts": 0,
@@ -387,8 +386,8 @@
       },
       {
         "expiryDate": "2031-05-27",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 1644,
         "strikeCount": 0,
         "oiContracts": 0,
@@ -400,8 +399,8 @@
       },
       {
         "expiryDate": "2031-11-24",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 1825,
         "strikeCount": 0,
         "oiContracts": 0,
@@ -413,8 +412,8 @@
       },
       {
         "expiryDate": "2032-05-25",
-        "tradeDate": "2026-11-24",
-        "futurePrice": 3549.28,
+        "tradeDate": "2026-11-25",
+        "futurePrice": 3536.13,
         "daysToExpiry": 2008,
         "strikeCount": 0,
         "oiContracts": 0,
@@ -427,75 +426,75 @@
     ]
   },
   "gamma": {
-    "callExposure": 422464934.2848938,
-    "putExposure": -968619964.9642254,
-    "netExposure": -546155030.6793315,
-    "flipStrike": 3858.9428813671693,
+    "callExposure": 603549031.8554465,
+    "putExposure": -1094479722.0179987,
+    "netExposure": -490930690.16255224,
+    "flipStrike": 3811.3804693833804,
     "regime": "negative"
   },
   "vanna": {
-    "callExposure": 192950030.02074394,
-    "putExposure": -177275618.80504546,
-    "netExposure": 15674411.21569848
+    "callExposure": 250443919.08873817,
+    "putExposure": -149652881.5217767,
+    "netExposure": 100791037.56696147
   },
   "delta": {
-    "callExposure": 2944283808.226416,
-    "putExposure": -27187404514.607323,
-    "netExposure": -24243120706.380905
+    "callExposure": 4312966729.887777,
+    "putExposure": -26014884045.9835,
+    "netExposure": -21701917316.095726
   },
   "scenario": {
-    "targetPrice": 3708.407126134702,
-    "bias": 0.8649789386920004,
-    "weight": 0.22379747264304004,
-    "score": 0.8649789386920004,
+    "targetPrice": 3780.940323343195,
+    "bias": 0.9231143465651482,
+    "weight": 0.23077372158781778,
+    "score": 0.9231143465651482,
     "label": "Upside options pressure",
     "caveat": "Options-aware scenario guide, not a guaranteed price target; direction uses a signed OI heuristic and fallback IV where noted."
   },
   "levels": [
     {
       "strike": 5000,
-      "callOi": 14094,
+      "callOi": 13302,
       "putOi": 183,
-      "totalOi": 14277,
-      "distancePct": 0.44084744883550714,
+      "totalOi": 13485,
+      "distancePct": 0.4139751649402029,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24,
+      "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 58.959725432513835,
-      "deltaExposure": -61387628.040862374,
-      "gammaExposure": 460567.16180318774,
-      "vannaExposure": 713318.957782813
-    },
-    {
-      "strike": 4000,
-      "callOi": 6683,
-      "putOi": 3711,
-      "totalOi": 10394,
-      "distancePct": 0.15267795906840573,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 51.63469309216856,
-      "deltaExposure": -1057082115.0817442,
-      "gammaExposure": 10376802.173182892,
-      "vannaExposure": 6276754.532286875
+      "daysToExpiry": 58.76670374490174,
+      "deltaExposure": -61414361.679593034,
+      "gammaExposure": 765213.0501633235,
+      "vannaExposure": 1124970.7305358336
     },
     {
       "strike": 3900,
-      "callOi": 6600,
+      "callOi": 8037,
       "putOi": 3577,
-      "totalOi": 10177,
-      "distancePct": 0.12386101009169559,
+      "totalOi": 11614,
+      "distancePct": 0.10290062865335829,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.23999999999999996,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 54.78302049250904,
+      "deltaExposure": -649243093.3977993,
+      "gammaExposure": 38839595.89748488,
+      "vannaExposure": 16345851.83664532
+    },
+    {
+      "strike": 4000,
+      "callOi": 6905,
+      "putOi": 3623,
+      "totalOi": 10528,
+      "distancePct": 0.13118013195216235,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -504,36 +503,36 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 54.34234057187776,
-      "deltaExposure": -860295127.4910764,
-      "gammaExposure": 17989455.846241646,
-      "vannaExposure": 8908871.395055851
+      "daysToExpiry": 52.02469604863222,
+      "deltaExposure": -936977840.7108133,
+      "gammaExposure": 17939843.03620454,
+      "vannaExposure": 9465533.984694231
     },
     {
       "strike": 3500,
-      "callOi": 232,
-      "putOi": 9776,
-      "totalOi": 10008,
-      "distancePct": 0.008593214184855012,
+      "callOi": 236,
+      "putOi": 9842,
+      "totalOi": 10078,
+      "distancePct": -0.010217384541857938,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24000000000000002,
+      "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 56.10551558752998,
-      "deltaExposure": -1711344054.058658,
-      "gammaExposure": -143197692.84888127,
-      "vannaExposure": -7666125.207995369
+      "daysToExpiry": 55.2028180194483,
+      "deltaExposure": -1462355071.6538866,
+      "gammaExposure": -146840425.00010353,
+      "vannaExposure": 3711504.540331933
     },
     {
       "strike": 4500,
-      "callOi": 8736,
-      "putOi": 520,
-      "totalOi": 9256,
-      "distancePct": 0.2967627039519564,
+      "callOi": 8768,
+      "putOi": 517,
+      "totalOi": 9285,
+      "distancePct": 0.27257764844618265,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -542,17 +541,17 @@
       ],
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 54.460350043215215,
-      "deltaExposure": -163056865.73499197,
-      "gammaExposure": 3580981.3833526494,
-      "vannaExposure": 3966919.89686939
+      "daysToExpiry": 54.930748519116854,
+      "deltaExposure": -154721203.8168142,
+      "gammaExposure": 5674882.820382718,
+      "vannaExposure": 5839429.978103971
     },
     {
       "strike": 3800,
-      "callOi": 4530,
-      "putOi": 4182,
-      "totalOi": 8712,
-      "distancePct": 0.09504406111498544,
+      "callOi": 4904,
+      "putOi": 4108,
+      "totalOi": 9012,
+      "distancePct": 0.07462112535455424,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -561,74 +560,17 @@
       ],
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 44.814853076216714,
-      "deltaExposure": -1018389379.6386423,
-      "gammaExposure": 2968566.8765666434,
-      "vannaExposure": 1093736.05673745
+      "daysToExpiry": 44.31868619618287,
+      "deltaExposure": -821152236.2635769,
+      "gammaExposure": 10505290.313694883,
+      "vannaExposure": 3192036.180763486
     },
     {
       "strike": 3600,
-      "callOi": 3573,
-      "putOi": 5031,
-      "totalOi": 8604,
-      "distancePct": 0.03741016316156515,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 60.15841469084147,
-      "deltaExposure": -648490102.4442525,
-      "gammaExposure": -22028304.39591016,
-      "vannaExposure": -3726002.7628799705
-    },
-    {
-      "strike": 4100,
-      "callOi": 3713,
-      "putOi": 3984,
-      "totalOi": 7697,
-      "distancePct": 0.18149490804511587,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 57.60283227231389,
-      "deltaExposure": -1253632075.034348,
-      "gammaExposure": -3289671.0167490197,
-      "vannaExposure": -2361767.510705274
-    },
-    {
-      "strike": 4800,
-      "callOi": 6559,
-      "putOi": 316,
-      "totalOi": 6875,
-      "distancePct": 0.38321355088208686,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 55.174836363636366,
-      "deltaExposure": -106655950.18257515,
-      "gammaExposure": 581663.3441977524,
-      "vannaExposure": 801886.2063596878
-    },
-    {
-      "strike": 4600,
-      "callOi": 6386,
-      "putOi": 321,
-      "totalOi": 6707,
-      "distancePct": 0.3255796529286666,
+      "callOi": 3623,
+      "putOi": 5082,
+      "totalOi": 8705,
+      "distancePct": 0.018062118756946122,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -637,17 +579,36 @@
       ],
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 55.432533174295514,
-      "deltaExposure": -104323074.6055107,
-      "gammaExposure": 1573219.705850979,
-      "vannaExposure": 1886091.4276030792
+      "daysToExpiry": 59.755198161975876,
+      "deltaExposure": -430903814.12199485,
+      "gammaExposure": -24883002.26837042,
+      "vannaExposure": -2230611.283217198
     },
     {
-      "strike": 4400,
-      "callOi": 5279,
-      "putOi": 1014,
-      "totalOi": 6293,
-      "distancePct": 0.2679457549752463,
+      "strike": 4100,
+      "callOi": 4297,
+      "putOi": 3983,
+      "totalOi": 8280,
+      "distancePct": 0.1594596352509664,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24000000000000002,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 58.59070048309179,
+      "deltaExposure": -1205379868.0158727,
+      "gammaExposure": -885584.6285977745,
+      "vannaExposure": -570741.7565209426
+    },
+    {
+      "strike": 4600,
+      "callOi": 6596,
+      "putOi": 321,
+      "totalOi": 6917,
+      "distancePct": 0.30085715174498673,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -656,17 +617,74 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 51.70411568409344,
-      "deltaExposure": -333746834.70989376,
-      "gammaExposure": 2732364.3431727793,
-      "vannaExposure": 2769838.3890089104
+      "daysToExpiry": 55.67760589851091,
+      "deltaExposure": -101789145.9820999,
+      "gammaExposure": 2623544.601352306,
+      "vannaExposure": 2937834.337912498
+    },
+    {
+      "strike": 4800,
+      "callOi": 6557,
+      "putOi": 316,
+      "totalOi": 6873,
+      "distancePct": 0.3574161583425948,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 55.1770696930016,
+      "deltaExposure": -107133554.55876327,
+      "gammaExposure": 947803.3852664782,
+      "vannaExposure": 1231893.7910437053
+    },
+    {
+      "strike": 4400,
+      "callOi": 5312,
+      "putOi": 1010,
+      "totalOi": 6322,
+      "distancePct": 0.2442981451473786,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 51.84925656437836,
+      "deltaExposure": -329071907.3954474,
+      "gammaExposure": 4213383.403590239,
+      "vannaExposure": 3937147.619384933
+    },
+    {
+      "strike": 4300,
+      "callOi": 5624,
+      "putOi": 673,
+      "totalOi": 6297,
+      "distancePct": 0.21601864184857453,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.23999999999999996,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 55.77878354772114,
+      "deltaExposure": -184154643.7643848,
+      "gammaExposure": 8337263.922341171,
+      "vannaExposure": 6983730.381012239
     },
     {
       "strike": 5200,
       "callOi": 5996,
       "putOi": 0,
       "totalOi": 5996,
-      "distancePct": 0.49848134678892747,
+      "distancePct": 0.4705341715378111,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -676,54 +694,149 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 65.05887258172115,
-      "deltaExposure": 276285.6387844272,
-      "gammaExposure": 87336.58327509917,
-      "vannaExposure": 149642.6142749306
-    },
-    {
-      "strike": 4300,
-      "callOi": 5250,
-      "putOi": 674,
-      "totalOi": 5924,
-      "distancePct": 0.23912880599853617,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 53.37170830519919,
-      "deltaExposure": -203670904.8206046,
-      "gammaExposure": 4615517.693841052,
-      "vannaExposure": 4226422.506609524
+      "deltaExposure": 505788.01999162027,
+      "gammaExposure": 154899.40558860457,
+      "vannaExposure": 253206.5865799022
     },
     {
       "strike": 4200,
-      "callOi": 4027,
-      "putOi": 1755,
-      "totalOi": 5782,
-      "distancePct": 0.210311857021826,
+      "callOi": 4092,
+      "putOi": 1758,
+      "totalOi": 5850,
+      "distancePct": 0.18773913854977048,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24000000000000002,
+      "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 54.1271186440678,
-      "deltaExposure": -556987312.1928453,
-      "gammaExposure": 3115373.352863796,
-      "vannaExposure": 2524180.5645590043
+      "daysToExpiry": 53.96957264957265,
+      "deltaExposure": -543785736.7074628,
+      "gammaExposure": 5108795.3886869,
+      "vannaExposure": 3738970.302167857
     },
     {
       "strike": 3700,
-      "callOi": 488,
-      "putOi": 4967,
-      "totalOi": 5455,
-      "distancePct": 0.0662271121382753,
+      "callOi": 562,
+      "putOi": 5112,
+      "totalOi": 5674,
+      "distancePct": 0.04634162205575018,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 46.73510750793091,
+      "deltaExposure": -1188896705.3220258,
+      "gammaExposure": -66786796.02018669,
+      "vannaExposure": -13620361.382834524
+    },
+    {
+      "strike": 3950,
+      "callOi": 2770,
+      "putOi": 2427,
+      "totalOi": 5197,
+      "distancePct": 0.11704038030276033,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 48.48335578218203,
+      "deltaExposure": -658319782.3610849,
+      "gammaExposure": 927404.510136514,
+      "vannaExposure": 379533.5325371394
+    },
+    {
+      "strike": 4700,
+      "callOi": 4584,
+      "putOi": 442,
+      "totalOi": 5026,
+      "distancePct": 0.32913665504379075,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 63.93891762833267,
+      "deltaExposure": -146352150.70683533,
+      "gammaExposure": 1459790.9737633993,
+      "vannaExposure": 1771691.403129452
+    },
+    {
+      "strike": 3750,
+      "callOi": 3065,
+      "putOi": 1707,
+      "totalOi": 4772,
+      "distancePct": 0.06048137370515221,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 63.72569153394803,
+      "deltaExposure": -124101635.07928538,
+      "gammaExposure": 15850091.204491895,
+      "vannaExposure": 4249334.815879562
+    },
+    {
+      "strike": 4050,
+      "callOi": 1891,
+      "putOi": 2824,
+      "totalOi": 4715,
+      "distancePct": 0.1453198836015644,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 58.93870625662778,
+      "deltaExposure": -848933278.8090713,
+      "gammaExposure": -5886747.1912747845,
+      "vannaExposure": -3454666.2796628377
+    },
+    {
+      "strike": 5500,
+      "callOi": 4441,
+      "putOi": 0,
+      "totalOi": 4441,
+      "distancePct": 0.5553726814342232,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 57.55235307363206,
+      "deltaExposure": 46690.06784439503,
+      "gammaExposure": 15716.468061668014,
+      "vannaExposure": 29376.221240447147
+    },
+    {
+      "strike": 3850,
+      "callOi": 992,
+      "putOi": 3244,
+      "totalOi": 4236,
+      "distancePct": 0.08876087700395627,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -732,93 +845,17 @@
       ],
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 46.321723189734186,
-      "deltaExposure": -1281193422.4884632,
-      "gammaExposure": -55798263.09087682,
-      "vannaExposure": -15758659.164320823
-    },
-    {
-      "strike": 4700,
-      "callOi": 4578,
-      "putOi": 442,
-      "totalOi": 5020,
-      "distancePct": 0.35439660190537675,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 63.941235059760956,
-      "deltaExposure": -146673871.5007921,
-      "gammaExposure": 951550.1557336362,
-      "vannaExposure": 1229771.0498766657
-    },
-    {
-      "strike": 5500,
-      "callOi": 4444,
-      "putOi": 0,
-      "totalOi": 4444,
-      "distancePct": 0.5849321937190579,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 57.57425742574257,
-      "deltaExposure": 24142.819986595936,
-      "gammaExposure": 8381.208690019375,
-      "vannaExposure": 16324.795620035946
-    },
-    {
-      "strike": 3850,
-      "callOi": 1031,
-      "putOi": 3230,
-      "totalOi": 4261,
-      "distancePct": 0.1094525356033405,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 54.32996949072987,
-      "deltaExposure": -918399622.3451468,
-      "gammaExposure": -17240972.38539454,
-      "vannaExposure": -7787563.804852892
-    },
-    {
-      "strike": 4050,
-      "callOi": 1438,
-      "putOi": 2823,
-      "totalOi": 4261,
-      "distancePct": 0.1670864335567608,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.23999999999999996,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 59.157005397793945,
-      "deltaExposure": -884394029.8581203,
-      "gammaExposure": -6328603.861801791,
-      "vannaExposure": -4205966.700596613
+      "daysToExpiry": 54.52431539187913,
+      "deltaExposure": -869354573.5907483,
+      "gammaExposure": -22539931.75066872,
+      "vannaExposure": -8393076.606348734
     },
     {
       "strike": 6000,
       "callOi": 4140,
       "putOi": 6,
       "totalOi": 4146,
-      "distancePct": 0.7290169386026086,
+      "distancePct": 0.6967701979282436,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -828,73 +865,16 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 56.13434635793536,
-      "deltaExposure": -2074466.7066667106,
-      "gammaExposure": 53.496805069409234,
-      "vannaExposure": 123.51865353809839
-    },
-    {
-      "strike": 3750,
-      "callOi": 2180,
-      "putOi": 1698,
-      "totalOi": 3878,
-      "distancePct": 0.08063558662663037,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24000000000000002,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 70.3604951005673,
-      "deltaExposure": -267389204.11930487,
-      "gammaExposure": 3621151.2606696337,
-      "vannaExposure": 1389212.4331940832
-    },
-    {
-      "strike": 3950,
-      "callOi": 1384,
-      "putOi": 2411,
-      "totalOi": 3795,
-      "distancePct": 0.13826948458005064,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 53.52332015810277,
-      "deltaExposure": -721227920.9631102,
-      "gammaExposure": -6058764.612939583,
-      "vannaExposure": -3386347.594232242
-    },
-    {
-      "strike": 4275,
-      "callOi": 3084,
-      "putOi": 173,
-      "totalOi": 3257,
-      "distancePct": 0.23192456875435863,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 85.61436905127418,
-      "deltaExposure": -12869536.543123536,
-      "gammaExposure": 7972366.28188579,
-      "vannaExposure": 7162994.281657203
+      "deltaExposure": -2113734.950024905,
+      "gammaExposure": 120.04630367337191,
+      "vannaExposure": 267.688490853089
     },
     {
       "strike": 4250,
-      "callOi": 2359,
-      "putOi": 867,
-      "totalOi": 3226,
-      "distancePct": 0.2247203315101811,
+      "callOi": 3238,
+      "putOi": 865,
+      "totalOi": 4103,
+      "distancePct": 0.20187889019917252,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -903,17 +883,55 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 54.88778673279603,
-      "deltaExposure": -278210199.1928481,
-      "gammaExposure": 2026446.6709545432,
-      "vannaExposure": 1752470.6630612127
+      "daysToExpiry": 54.5376553741165,
+      "deltaExposure": -263363667.27096006,
+      "gammaExposure": 4946721.724754125,
+      "vannaExposure": 3887950.817206174
+    },
+    {
+      "strike": 4275,
+      "callOi": 3102,
+      "putOi": 173,
+      "totalOi": 3275,
+      "distancePct": 0.20894876602387352,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 85.28091603053436,
+      "deltaExposure": 5315637.846383549,
+      "gammaExposure": 10505207.630739458,
+      "vannaExposure": 8614314.501176456
+    },
+    {
+      "strike": 4450,
+      "callOi": 2517,
+      "putOi": 696,
+      "totalOi": 3213,
+      "distancePct": 0.25843789679678064,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24000000000000005,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 57.64892623716153,
+      "deltaExposure": -231902617.59841782,
+      "gammaExposure": 2232492.227458172,
+      "vannaExposure": 2192068.2921293634
     },
     {
       "strike": 6500,
-      "callOi": 3112,
+      "callOi": 3115,
       "putOi": 0,
-      "totalOi": 3112,
-      "distancePct": 0.8731016834861594,
+      "totalOi": 3115,
+      "distancePct": 0.8381677144222638,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -922,17 +940,17 @@
       ],
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 56.41741645244216,
-      "deltaExposure": 25.087560604773802,
-      "gammaExposure": 11.328265328718201,
-      "vannaExposure": 29.958078232548953
+      "daysToExpiry": 56.41348314606741,
+      "deltaExposure": 59.190099511913786,
+      "gammaExposure": 25.98585654885143,
+      "vannaExposure": 66.68194302487738
     },
     {
       "strike": 3400,
-      "callOi": 4,
-      "putOi": 3076,
-      "totalOi": 3080,
-      "distancePct": -0.02022373479185513,
+      "callOi": 37,
+      "putOi": 3062,
+      "totalOi": 3099,
+      "distancePct": -0.038496887840662,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -941,36 +959,36 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 49.34318181818182,
-      "deltaExposure": -409268043.7916035,
-      "gammaExposure": -48706146.6606526,
-      "vannaExposure": 3415146.0420926386
+      "daysToExpiry": 49.748951274604714,
+      "deltaExposure": -318515882.7160357,
+      "gammaExposure": -44013869.35262954,
+      "vannaExposure": 6520328.918875339
     },
     {
       "strike": 4750,
-      "callOi": 2858,
+      "callOi": 2860,
       "putOi": 83,
-      "totalOi": 2941,
-      "distancePct": 0.3688050763937318,
+      "totalOi": 2943,
+      "distancePct": 0.3432764066931928,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.23999999999999996,
+      "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 53.401904114246854,
-      "deltaExposure": -27557921.515841313,
-      "gammaExposure": 277797.1116175585,
-      "vannaExposure": 370354.3512106907
+      "daysToExpiry": 53.40774719673802,
+      "deltaExposure": -27337199.33382258,
+      "gammaExposure": 463014.0128327047,
+      "vannaExposure": 580728.2055035452
     },
     {
       "strike": 5350,
       "callOi": 2935,
       "putOi": 0,
       "totalOi": 2935,
-      "distancePct": 0.5417067702539926,
+      "distancePct": 0.5129534264860172,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -980,16 +998,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 37.889608177172065,
-      "deltaExposure": 3125.1908209229523,
-      "gammaExposure": 1156.8139926511735,
-      "vannaExposure": 2116.0356867011287
+      "deltaExposure": 6356.179789777685,
+      "gammaExposure": 2312.1698827984083,
+      "vannaExposure": 4046.6526649304487
     },
     {
       "strike": 4550,
-      "callOi": 2576,
+      "callOi": 2575,
       "putOi": 116,
-      "totalOi": 2692,
-      "distancePct": 0.3111711784403115,
+      "totalOi": 2691,
+      "distancePct": 0.28671740009558466,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -998,17 +1016,17 @@
       ],
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 59.17459138187221,
-      "deltaExposure": -35225737.13456284,
-      "gammaExposure": 1049626.8676386632,
-      "vannaExposure": 1213294.4422626467
+      "daysToExpiry": 59.09810479375697,
+      "deltaExposure": -33241773.420286205,
+      "gammaExposure": 1575812.8882200825,
+      "vannaExposure": 1697179.327986827
     },
     {
       "strike": 4775,
       "callOi": 2646,
       "putOi": 15,
       "totalOi": 2661,
-      "distancePct": 0.37600931363790935,
+      "distancePct": 0.3503462825178938,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1018,16 +1036,35 @@
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 88.0988350244269,
-      "deltaExposure": -1311082.672217967,
-      "gammaExposure": 947061.9343205417,
-      "vannaExposure": 1287516.1340868487
+      "deltaExposure": 915004.6181570366,
+      "gammaExposure": 1443168.4496958465,
+      "vannaExposure": 1848741.4129388346
+    },
+    {
+      "strike": 3450,
+      "callOi": 350,
+      "putOi": 2280,
+      "totalOi": 2630,
+      "distancePct": -0.024357136191259968,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.23999999999999996,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 56.94980988593156,
+      "deltaExposure": -222761596.92854565,
+      "gammaExposure": -26054319.614912823,
+      "vannaExposure": 2133160.8935359735
     },
     {
       "strike": 4755,
       "callOi": 2474,
       "putOi": 31,
       "totalOi": 2505,
-      "distancePct": 0.3702459238425673,
+      "distancePct": 0.344690381858133,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1037,16 +1074,16 @@
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 88.34770459081837,
-      "deltaExposure": -6653826.612243628,
-      "gammaExposure": 977241.0657756556,
-      "vannaExposure": 1311467.399001551
+      "deltaExposure": -4458224.8176430315,
+      "gammaExposure": 1480389.2325837968,
+      "vannaExposure": 1870558.237389007
     },
     {
       "strike": 4645,
       "callOi": 2462,
       "putOi": 14,
       "totalOi": 2476,
-      "distancePct": 0.3385472799681862,
+      "distancePct": 0.31358292822944855,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1056,35 +1093,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 89.33602584814217,
-      "deltaExposure": 2312151.785165693,
-      "gammaExposure": 1610098.0891839755,
-      "vannaExposure": 2003772.5240094992
+      "deltaExposure": 6132107.856268561,
+      "gammaExposure": 2363712.6747385957,
+      "vannaExposure": 2756218.375127621
     },
     {
       "strike": 3650,
-      "callOi": 494,
-      "putOi": 1877,
-      "totalOi": 2371,
-      "distancePct": 0.05181863764992023,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 67.90510333192746,
-      "deltaExposure": -382896225.59770995,
-      "gammaExposure": -17173096.395495493,
-      "vannaExposure": -3974943.721715414
-    },
-    {
-      "strike": 3595,
-      "callOi": 2231,
-      "putOi": 63,
-      "totalOi": 2294,
-      "distancePct": 0.03596931571272965,
+      "callOi": 490,
+      "putOi": 1850,
+      "totalOi": 2340,
+      "distancePct": 0.03220187040634815,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1093,17 +1111,17 @@
       ],
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 59.86312118570183,
-      "deltaExposure": 274910368.8466099,
-      "gammaExposure": 29160211.312264595,
-      "vannaExposure": 4870725.880107195
+      "daysToExpiry": 68.12008547008547,
+      "deltaExposure": -326095446.4910429,
+      "gammaExposure": -18588205.022670805,
+      "vannaExposure": -2841010.046876492
     },
     {
-      "strike": 4150,
-      "callOi": 1476,
-      "putOi": 809,
-      "totalOi": 2285,
-      "distancePct": 0.19590338253347095,
+      "strike": 3595,
+      "callOi": 2233,
+      "putOi": 67,
+      "totalOi": 2300,
+      "distancePct": 0.016648143592005917,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1112,17 +1130,74 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 49.00831509846827,
-      "deltaExposure": -259437771.7944934,
-      "gammaExposure": 1097029.4098849937,
-      "vannaExposure": 836639.938325547
+      "daysToExpiry": 59.86739130434783,
+      "deltaExposure": 340867189.4778577,
+      "gammaExposure": 31011132.436836835,
+      "vannaExposure": 2745993.7655569683
+    },
+    {
+      "strike": 4150,
+      "callOi": 1490,
+      "putOi": 807,
+      "totalOi": 2297,
+      "distancePct": 0.17359938690036844,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 50.55071832825424,
+      "deltaExposure": -250651939.0664722,
+      "gammaExposure": 2048737.144298255,
+      "vannaExposure": 1403475.035544145
+    },
+    {
+      "strike": 4350,
+      "callOi": 2074,
+      "putOi": 187,
+      "totalOi": 2261,
+      "distancePct": 0.23015839349797657,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 52.79743476337904,
+      "deltaExposure": -53539553.19810144,
+      "gammaExposure": 2491525.0605645594,
+      "vannaExposure": 2201781.915154664
     },
     {
       "strike": 4900,
-      "callOi": 2223,
+      "callOi": 2217,
       "putOi": 19,
-      "totalOi": 2242,
-      "distancePct": 0.41203049985879703,
+      "totalOi": 2236,
+      "distancePct": 0.3856956616413989,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 48.23121645796064,
+      "deltaExposure": -6245808.704990054,
+      "gammaExposure": 111886.27455124859,
+      "vannaExposure": 154840.78481922517
+    },
+    {
+      "strike": 3550,
+      "callOi": 93,
+      "putOi": 2111,
+      "totalOi": 2204,
+      "distancePct": 0.003922367107544092,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1131,55 +1206,17 @@
       ],
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 48.19045495093666,
-      "deltaExposure": -6303306.9617086705,
-      "gammaExposure": 64111.684798071554,
-      "vannaExposure": 93787.60839154951
-    },
-    {
-      "strike": 3550,
-      "callOi": 99,
-      "putOi": 2091,
-      "totalOi": 2190,
-      "distancePct": 0.023001688673210084,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.23999999999999996,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 49.91004566210046,
-      "deltaExposure": -411925000.18740714,
-      "gammaExposure": -31972789.985268176,
-      "vannaExposure": -3511000.250453683
-    },
-    {
-      "strike": 4450,
-      "callOi": 1489,
-      "putOi": 696,
-      "totalOi": 2185,
-      "distancePct": 0.2823542294636014,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 55.305263157894736,
-      "deltaExposure": -234706281.8800621,
-      "gammaExposure": 776852.2940998022,
-      "vannaExposure": 826624.1012493578
+      "daysToExpiry": 49.81760435571688,
+      "deltaExposure": -355924900.0067872,
+      "gammaExposure": -34012975.380220085,
+      "vannaExposure": -1064446.3647663293
     },
     {
       "strike": 4425,
       "callOi": 2056,
-      "putOi": 123,
-      "totalOi": 2179,
-      "distancePct": 0.2751499922194238,
+      "putOi": 120,
+      "totalOi": 2176,
+      "distancePct": 0.2513680209720796,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1188,17 +1225,17 @@
       ],
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 34.95318953648463,
-      "deltaExposure": -41777230.85652398,
-      "gammaExposure": 215869.22295154788,
-      "vannaExposure": 221717.84825229828
+      "daysToExpiry": 34.955882352941174,
+      "deltaExposure": -40787546.99438903,
+      "gammaExposure": 446404.75621639093,
+      "vannaExposure": 423123.5904259458
     },
     {
       "strike": 4525,
       "callOi": 2143,
       "putOi": 10,
       "totalOi": 2153,
-      "distancePct": 0.303966941196134,
+      "distancePct": 0.2796475242708837,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1208,16 +1245,16 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 37.00696702275894,
-      "deltaExposure": -2880747.6020898297,
-      "gammaExposure": 157748.87282854758,
-      "vannaExposure": 177166.8985609507
+      "deltaExposure": -2461906.110713495,
+      "gammaExposure": 304065.65876412694,
+      "vannaExposure": 317390.0011003628
     },
     {
       "strike": 5400,
-      "callOi": 2136,
+      "callOi": 2137,
       "putOi": 0,
-      "totalOi": 2136,
-      "distancePct": 0.5561152447423477,
+      "totalOi": 2137,
+      "distancePct": 0.5270931781354192,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1226,74 +1263,36 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 56.862827715355806,
-      "deltaExposure": 8260.029636498057,
-      "gammaExposure": 3058.2302236850765,
-      "vannaExposure": 5714.183631404543
-    },
-    {
-      "strike": 4350,
-      "callOi": 1933,
-      "putOi": 190,
-      "totalOi": 2123,
-      "distancePct": 0.2535372804868912,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 52.13094677343382,
-      "deltaExposure": -58611437.03497408,
-      "gammaExposure": 1444107.9573296544,
-      "vannaExposure": 1390192.9906973161
-    },
-    {
-      "strike": 3450,
-      "callOi": 350,
-      "putOi": 1744,
-      "totalOi": 2094,
-      "distancePct": -0.005815260303500059,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.23999999999999996,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 59.69293218720153,
-      "deltaExposure": -207707828.08603537,
-      "gammaExposure": -18515828.216823984,
-      "vannaExposure": 29567.25483305197
+      "daysToExpiry": 56.865231633130556,
+      "deltaExposure": 16805.536589151023,
+      "gammaExposure": 6114.093004367061,
+      "vannaExposure": 10940.768342289542
     },
     {
       "strike": 3300,
       "callOi": 36,
-      "putOi": 2032,
-      "totalOi": 2068,
-      "distancePct": -0.049040683768565276,
+      "putOi": 1987,
+      "totalOi": 2023,
+      "distancePct": -0.06677639113946605,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.23999999999999996,
+      "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 54.157640232108314,
-      "deltaExposure": -176124426.8347667,
-      "gammaExposure": -25848790.275720704,
-      "vannaExposure": 4990911.330713724
+      "daysToExpiry": 53.68512110726643,
+      "deltaExposure": -128593773.41589716,
+      "gammaExposure": -21562822.72488196,
+      "vannaExposure": 5847465.008412579
     },
     {
       "strike": 5300,
       "callOi": 1932,
       "putOi": 0,
       "totalOi": 1932,
-      "distancePct": 0.5272982957656376,
+      "distancePct": 0.49881367483661515,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1303,35 +1302,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 50.518115942028984,
-      "deltaExposure": 13088.489695761033,
-      "gammaExposure": 4622.132738195065,
-      "vannaExposure": 8277.318810048992
-    },
-    {
-      "strike": 5550,
-      "callOi": 1901,
-      "putOi": 0,
-      "totalOi": 1901,
-      "distancePct": 0.5993406682074129,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.23999999999999996,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 61.387690689111,
-      "deltaExposure": 911.5916498100335,
-      "gammaExposure": 439.89440398555126,
-      "vannaExposure": 869.9049779005844
+      "deltaExposure": 25759.674485921583,
+      "gammaExposure": 8912.055650912302,
+      "vannaExposure": 15255.741319971985
     },
     {
       "strike": 5100,
       "callOi": 1848,
       "putOi": 0,
       "totalOi": 1848,
-      "distancePct": 0.4696643978122173,
+      "distancePct": 0.442254668239007,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1341,35 +1321,35 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 64.18614718614718,
-      "deltaExposure": 154305.22057628346,
-      "gammaExposure": 47098.51280326967,
-      "vannaExposure": 76876.30125623976
+      "deltaExposure": 276771.9444977257,
+      "gammaExposure": 81771.80326020173,
+      "vannaExposure": 127030.20829988914
     },
     {
       "strike": 4160,
-      "callOi": 1355,
-      "putOi": 450,
-      "totalOi": 1805,
-      "distancePct": 0.19878507743114196,
+      "callOi": 1347,
+      "putOi": 449,
+      "totalOi": 1796,
+      "distancePct": 0.17642733723024887,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24,
+      "impliedVol": 0.23999999999999994,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 51.19390581717452,
-      "deltaExposure": -139235630.68612966,
-      "gammaExposure": 2129923.786933287,
-      "vannaExposure": 1650541.586270808
+      "daysToExpiry": 51.23663697104677,
+      "deltaExposure": -132772158.79157618,
+      "gammaExposure": 3068998.922004185,
+      "vannaExposure": 2136756.0162122785
     },
     {
       "strike": 5600,
       "callOi": 1793,
       "putOi": 0,
       "totalOi": 1793,
-      "distancePct": 0.613749142695768,
+      "distancePct": 0.5836521847330273,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1379,53 +1359,53 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 73.93251533742331,
-      "deltaExposure": 16082.231575943544,
-      "gammaExposure": 5648.688053673432,
-      "vannaExposure": 11430.461263503043
+      "deltaExposure": 31380.863760008375,
+      "gammaExposure": 10630.676624919106,
+      "vannaExposure": 20677.807775813406
     },
     {
       "strike": 8000,
-      "callOi": 1563,
+      "callOi": 1564,
       "putOi": 0,
-      "totalOi": 1563,
-      "distancePct": 1.3053559181368113,
+      "totalOi": 1564,
+      "distancePct": 1.2623602639043248,
       "expiryCount": 2,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26"
       ],
-      "impliedVol": 0.24,
+      "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 60.348688419705695,
-      "deltaExposure": 0,
-      "gammaExposure": 1.0222379004796798e-8,
-      "vannaExposure": 3.57837414243355e-8
+      "daysToExpiry": 60.331202046035806,
+      "deltaExposure": 5.7475811702000195e-8,
+      "gammaExposure": 5.055324295676845e-8,
+      "vannaExposure": 1.7299755501785836e-7
     },
     {
       "strike": 5250,
-      "callOi": 1426,
+      "callOi": 1417,
       "putOi": 0,
-      "totalOi": 1426,
-      "distancePct": 0.5128898212772826,
+      "totalOi": 1417,
+      "distancePct": 0.4846739231872131,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24000000000000002,
+      "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 46.71178120617111,
-      "deltaExposure": 14772.263011383591,
-      "gammaExposure": 4920.353676789263,
-      "vannaExposure": 8622.26759568218
+      "daysToExpiry": 46.436838390966834,
+      "deltaExposure": 26183.569062573777,
+      "gammaExposure": 8553.502919013714,
+      "vannaExposure": 14312.617410572177
     },
     {
       "strike": 4950,
       "callOi": 1331,
       "putOi": 1,
       "totalOi": 1332,
-      "distancePct": 0.4264389743471521,
+      "distancePct": 0.3998354132908009,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1435,35 +1415,35 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 49.9451951951952,
-      "deltaExposure": -133433.65393449762,
-      "gammaExposure": 57776.00682825219,
-      "vannaExposure": 87184.78852446025
+      "deltaExposure": 5362.866160116042,
+      "gammaExposure": 93507.55480307447,
+      "vannaExposure": 133755.99788608044
     },
     {
       "strike": 3810,
-      "callOi": 964,
+      "callOi": 965,
       "putOi": 357,
-      "totalOi": 1321,
-      "distancePct": 0.09792575601265646,
+      "totalOi": 1322,
+      "distancePct": 0.07744907568443464,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24000000000000002,
+      "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 37.49356548069644,
-      "deltaExposure": -70218838.31916682,
-      "gammaExposure": 5333081.942755248,
-      "vannaExposure": 2143892.1008043992
+      "daysToExpiry": 37.55521936459909,
+      "deltaExposure": -45792956.02147528,
+      "gammaExposure": 7108788.281862501,
+      "vannaExposure": 2298932.7907577497
     },
     {
       "strike": 7900,
       "callOi": 1317,
       "putOi": 0,
       "totalOi": 1317,
-      "distancePct": 1.2765389691601012,
+      "distancePct": 1.2340807606055206,
       "expiryCount": 2,
       "expiryDates": [
         "2026-12-28",
@@ -1472,35 +1452,73 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 60.94305239179955,
-      "deltaExposure": 2.4279684324830533e-8,
-      "gammaExposure": 2.5387576746465747e-8,
-      "vannaExposure": 8.75393633659109e-8
+      "deltaExposure": 1.4844668599017283e-7,
+      "gammaExposure": 1.2254812351688988e-7,
+      "vannaExposure": 4.129472998390602e-7
     },
     {
       "strike": 3825,
-      "callOi": 211,
-      "putOi": 1069,
-      "totalOi": 1280,
-      "distancePct": 0.10224829835916298,
+      "callOi": 226,
+      "putOi": 1068,
+      "totalOi": 1294,
+      "distancePct": 0.08169100117925525,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24000000000000005,
+      "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 68.4125,
-      "deltaExposure": -287371291.3318624,
-      "gammaExposure": -7506963.335940508,
-      "vannaExposure": -3227173.2443646207
+      "daysToExpiry": 68.13910355486863,
+      "deltaExposure": -268264159.63815713,
+      "gammaExposure": -8666931.79890801,
+      "vannaExposure": -3045260.5444420637
+    },
+    {
+      "strike": 3855,
+      "callOi": 531,
+      "putOi": 733,
+      "totalOi": 1264,
+      "distancePct": 0.09017485216889647,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24000000000000002,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 61.35284810126582,
+      "deltaExposure": -167921031.58108097,
+      "gammaExposure": -1991072.2202434572,
+      "vannaExposure": -755466.1580404555
+    },
+    {
+      "strike": 3100,
+      "callOi": 2,
+      "putOi": 1239,
+      "totalOi": 1241,
+      "distancePct": -0.12333539773707418,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 57.01692183722804,
+      "deltaExposure": -31863976.792274076,
+      "gammaExposure": -6320685.0179930935,
+      "vannaExposure": 3344674.564726539
     },
     {
       "strike": 7000,
       "callOi": 1221,
       "putOi": 0,
       "totalOi": 1221,
-      "distancePct": 1.01718642836971,
+      "distancePct": 0.9795652309162841,
       "expiryCount": 2,
       "expiryDates": [
         "2026-12-28",
@@ -1509,16 +1527,16 @@
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 56.48976248976249,
-      "deltaExposure": 0.00031916521333044955,
-      "gammaExposure": 0.00023019344502165888,
-      "vannaExposure": 0.0006777237799018805
+      "deltaExposure": 0.0012526026117054606,
+      "gammaExposure": 0.0008804459980111928,
+      "vannaExposure": 0.0025230988474010973
     },
     {
       "strike": 5050,
       "callOi": 1215,
       "putOi": 4,
       "totalOi": 1219,
-      "distancePct": 0.4552559233238622,
+      "distancePct": 0.428114916589605,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1528,73 +1546,73 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 75.83264971287942,
-      "deltaExposure": -1087119.5605616886,
-      "gammaExposure": 82882.70758777599,
-      "vannaExposure": 132000.1794898349
+      "deltaExposure": -902831.8310993698,
+      "gammaExposure": 136716.0626367319,
+      "vannaExposure": 207003.71019619444
     },
     {
-      "strike": 4650,
-      "callOi": 1139,
-      "putOi": 26,
-      "totalOi": 1165,
-      "distancePct": 0.33998812741702167,
+      "strike": 5550,
+      "callOi": 1174,
+      "putOi": 0,
+      "totalOi": 1174,
+      "distancePct": 0.5695124330836253,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24000000000000002,
+      "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 62.20515021459227,
-      "deltaExposure": -7698634.088331012,
-      "gammaExposure": 323706.4711197582,
-      "vannaExposure": 403350.6988011016
+      "daysToExpiry": 61.00851788756388,
+      "deltaExposure": 1435.3654452156827,
+      "gammaExposure": 663.2734823588963,
+      "vannaExposure": 1259.69414293488
     },
     {
       "strike": 3475,
       "callOi": 1,
-      "putOi": 1140,
-      "totalOi": 1141,
-      "distancePct": 0.0013889769406774761,
+      "putOi": 1141,
+      "totalOi": 1142,
+      "distancePct": -0.017287260366558952,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24,
+      "impliedVol": 0.23999999999999994,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 54.88957055214724,
-      "deltaExposure": -191615378.87856555,
-      "gammaExposure": -17346527.674499884,
-      "vannaExposure": -401172.99564167263
+      "daysToExpiry": 54.845008756567424,
+      "deltaExposure": -162421109.74581116,
+      "gammaExposure": -17189964.75712178,
+      "vannaExposure": 950660.4467594227
     },
     {
-      "strike": 3100,
-      "callOi": 2,
-      "putOi": 1123,
-      "totalOi": 1125,
-      "distancePct": -0.10667458172198556,
+      "strike": 3200,
+      "callOi": 99,
+      "putOi": 996,
+      "totalOi": 1095,
+      "distancePct": -0.09505589443827012,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24,
+      "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 59.388444444444445,
-      "deltaExposure": -42468658.40150742,
-      "gammaExposure": -7510167.252723487,
-      "vannaExposure": 3381836.989145237
+      "daysToExpiry": 50.44200913242009,
+      "deltaExposure": -9438095.427651115,
+      "gammaExposure": -6854988.169275375,
+      "vannaExposure": 2729118.3328535818
     },
     {
       "strike": 4610,
       "callOi": 789,
       "putOi": 301,
       "totalOi": 1090,
-      "distancePct": 0.3284613478263376,
+      "distancePct": 0.3036851020748671,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1604,16 +1622,16 @@
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 83.67798165137614,
-      "deltaExposure": -100246498.63230841,
-      "gammaExposure": 261166.73942954233,
-      "vannaExposure": 316356.20950175193
+      "deltaExposure": -100467942.42314605,
+      "gammaExposure": 392064.95268852066,
+      "vannaExposure": 444062.20366590447
     },
     {
       "strike": 5750,
       "callOi": 1083,
       "putOi": 0,
       "totalOi": 1083,
-      "distancePct": 0.6569745661608333,
+      "distancePct": 0.6260714396812334,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1623,16 +1641,35 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 55.03508771929825,
-      "deltaExposure": 75.59675449603091,
-      "gammaExposure": 37.55140629212649,
-      "vannaExposure": 79.83031736398604
+      "deltaExposure": 194.58182830073997,
+      "gammaExposure": 94.60574901889623,
+      "vannaExposure": 193.67112675467973
+    },
+    {
+      "strike": 4650,
+      "callOi": 1051,
+      "putOi": 26,
+      "totalOi": 1077,
+      "distancePct": 0.31499690339438874,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24000000000000002,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 62.22191272051996,
+      "deltaExposure": -7165399.314613294,
+      "gammaExposure": 474368.4464714881,
+      "vannaExposure": 553857.5423239147
     },
     {
       "strike": 3525,
       "callOi": 11,
-      "putOi": 1041,
-      "totalOi": 1052,
-      "distancePct": 0.015797451429032546,
+      "putOi": 1048,
+      "totalOi": 1059,
+      "distancePct": -0.0031475087171569226,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1641,17 +1678,17 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 54.25950570342205,
-      "deltaExposure": -197821584.10596526,
-      "gammaExposure": -16536706.501185626,
-      "vannaExposure": -1341848.6076410227
+      "daysToExpiry": 54.17374881964117,
+      "deltaExposure": -170101882.47492746,
+      "gammaExposure": -17134015.847954664,
+      "vannaExposure": -45048.633736899115
     },
     {
       "strike": 4660,
       "callOi": 568,
       "putOi": 473,
       "totalOi": 1041,
-      "distancePct": 0.34286982231469265,
+      "distancePct": 0.31782485372426916,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1661,16 +1698,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 63.571565802113355,
-      "deltaExposure": -162207065.63391447,
-      "gammaExposure": 36442.22626536334,
-      "vannaExposure": 45827.48956183224
+      "deltaExposure": -164706413.07094824,
+      "gammaExposure": 54294.83392507787,
+      "vannaExposure": 64011.3574940838
     },
     {
       "strike": 6300,
       "callOi": 1030,
       "putOi": 0,
       "totalOi": 1030,
-      "distancePct": 0.815467785532739,
+      "distancePct": 0.7816087078246557,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1680,16 +1717,35 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 60.17281553398058,
-      "deltaExposure": 64.41950452804633,
-      "gammaExposure": 27.703026825146434,
-      "vannaExposure": 69.65516312516102
+      "deltaExposure": 145.88102527939037,
+      "gammaExposure": 60.883805977120645,
+      "vannaExposure": 148.30738053237488
+    },
+    {
+      "strike": 3250,
+      "callOi": 37,
+      "putOi": 984,
+      "totalOi": 1021,
+      "distancePct": -0.08091614278886808,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24000000000000002,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 56.417238001958864,
+      "deltaExposure": -45709619.099819474,
+      "gammaExposure": -8772451.832338808,
+      "vannaExposure": 2917756.4140159795
     },
     {
       "strike": 6900,
       "callOi": 1006,
       "putOi": 0,
       "totalOi": 1006,
-      "distancePct": 0.9883694793929999,
+      "distancePct": 0.9512857276174801,
       "expiryCount": 2,
       "expiryDates": [
         "2026-12-28",
@@ -1698,16 +1754,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 59.20377733598409,
-      "deltaExposure": 0.0008248075669476162,
-      "gammaExposure": 0.0005833211235514444,
-      "vannaExposure": 0.0016824123554649243
+      "deltaExposure": 0.003150308723342364,
+      "gammaExposure": 0.0021701679059116163,
+      "vannaExposure": 0.006088953643959119
     },
     {
       "strike": 4375,
-      "callOi": 769,
+      "callOi": 768,
       "putOi": 230,
-      "totalOi": 999,
-      "distancePct": 0.26074151773106874,
+      "totalOi": 998,
+      "distancePct": 0.23722826932267757,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1716,36 +1772,17 @@
       ],
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 45.93693693693694,
-      "deltaExposure": -77643023.8021266,
-      "gammaExposure": 410195.53004581394,
-      "vannaExposure": 404329.00464518066
-    },
-    {
-      "strike": 3200,
-      "callOi": 99,
-      "putOi": 890,
-      "totalOi": 989,
-      "distancePct": -0.07785763274527542,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 49.55106167846309,
-      "deltaExposure": -20233016.70436104,
-      "gammaExposure": -7535802.109283519,
-      "vannaExposure": 2414450.7041973425
+      "daysToExpiry": 45.9498997995992,
+      "deltaExposure": -77849555.58788654,
+      "gammaExposure": 645541.0001315222,
+      "vannaExposure": 585515.2180712391
     },
     {
       "strike": 4130,
-      "callOi": 503,
+      "callOi": 502,
       "putOi": 481,
-      "totalOi": 984,
-      "distancePct": 0.19013999273812893,
+      "totalOi": 983,
+      "distancePct": 0.16794348624060762,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1754,17 +1791,74 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 82.9380081300813,
-      "deltaExposure": -141207568.00154337,
-      "gammaExposure": 106039.54650103312,
-      "vannaExposure": 80546.90876288207
+      "daysToExpiry": 82.98880976602238,
+      "deltaExposure": -135515283.46843734,
+      "gammaExposure": 125073.70315369111,
+      "vannaExposure": 85307.441362017
     },
     {
       "strike": 3000,
       "callOi": 24,
-      "putOi": 859,
-      "totalOi": 883,
-      "distancePct": -0.1354915306986957,
+      "putOi": 845,
+      "totalOi": 869,
+      "distancePct": -0.15161490103587824,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 67.12313003452243,
+      "deltaExposure": -6549242.110317791,
+      "gammaExposure": -2661579.054877678,
+      "vannaExposure": 1758520.4367054454
+    },
+    {
+      "strike": 4415,
+      "callOi": 843,
+      "putOi": 0,
+      "totalOi": 843,
+      "distancePct": 0.2485400706421992,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 61.43534994068802,
+      "deltaExposure": 4136664.0493815066,
+      "gammaExposure": 1056483.0449586047,
+      "vannaExposure": 998874.9672642134
+    },
+    {
+      "strike": 4125,
+      "callOi": 298,
+      "putOi": 532,
+      "totalOi": 830,
+      "distancePct": 0.16652951107566744,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 54.54819277108434,
+      "deltaExposure": -171884985.12302092,
+      "gammaExposure": -201999.43337304523,
+      "vannaExposure": -123388.54565616115
+    },
+    {
+      "strike": 4175,
+      "callOi": 603,
+      "putOi": 223,
+      "totalOi": 826,
+      "distancePct": 0.18066926272506947,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1773,55 +1867,17 @@
       ],
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 66.3850509626274,
-      "deltaExposure": -12470932.220546497,
-      "gammaExposure": -3498028.453171137,
-      "vannaExposure": 2039348.364710765
-    },
-    {
-      "strike": 4415,
-      "callOi": 856,
-      "putOi": 0,
-      "totalOi": 856,
-      "distancePct": 0.27226829732175284,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.23999999999999996,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 61.376168224299064,
-      "deltaExposure": 2503837.406165952,
-      "gammaExposure": 681089.3442948039,
-      "vannaExposure": 697408.7828130382
-    },
-    {
-      "strike": 4125,
-      "callOi": 295,
-      "putOi": 532,
-      "totalOi": 827,
-      "distancePct": 0.1886991452892934,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 54.55622732769045,
-      "deltaExposure": -173316558.24869317,
-      "gammaExposure": -15.634276423428673,
-      "vannaExposure": 6570.438613951235
+      "daysToExpiry": 40.67796610169491,
+      "deltaExposure": -72014321.28492254,
+      "gammaExposure": 768186.4104587449,
+      "vannaExposure": 544552.2995205363
     },
     {
       "strike": 3625,
-      "callOi": 678,
-      "putOi": 134,
-      "totalOi": 812,
-      "distancePct": 0.04461440040574269,
+      "callOi": 677,
+      "putOi": 145,
+      "totalOi": 822,
+      "distancePct": 0.025131994581647138,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1830,55 +1886,36 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 60.693349753694584,
-      "deltaExposure": 50116082.09847216,
-      "gammaExposure": 6923211.2664269125,
-      "vannaExposure": 1403708.5343695988
-    },
-    {
-      "strike": 4175,
-      "callOi": 585,
-      "putOi": 225,
-      "totalOi": 810,
-      "distancePct": 0.2031076197776485,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.23999999999999996,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 40.864197530864196,
-      "deltaExposure": -73821922.09820679,
-      "gammaExposure": 451328.9082670649,
-      "vannaExposure": 356113.5879722162
+      "daysToExpiry": 60.462287104622874,
+      "deltaExposure": 69610560.7385046,
+      "gammaExposure": 7226461.228797258,
+      "vannaExposure": 900376.3331594474
     },
     {
       "strike": 4325,
-      "callOi": 744,
+      "callOi": 743,
       "putOi": 57,
-      "totalOi": 801,
-      "distancePct": 0.24633304324271368,
+      "totalOi": 800,
+      "distancePct": 0.22308851767327556,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.23999999999999996,
+      "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 54.01248439450686,
-      "deltaExposure": -15908595.34522045,
-      "gammaExposure": 639826.9357379371,
-      "vannaExposure": 603199.2953519177
+      "daysToExpiry": 54.03875,
+      "deltaExposure": -14376317.952054825,
+      "gammaExposure": 945550.043630367,
+      "vannaExposure": 816169.2487447264
     },
     {
       "strike": 4725,
       "callOi": 754,
       "putOi": 11,
       "totalOi": 765,
-      "distancePct": 0.36160083914955427,
+      "distancePct": 0.3362065308684918,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1888,35 +1925,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 43.5843137254902,
-      "deltaExposure": -3657284.367995554,
-      "gammaExposure": 37676.78240637916,
-      "vannaExposure": 49302.65100770742
-    },
-    {
-      "strike": 3855,
-      "callOi": 30,
-      "putOi": 734,
-      "totalOi": 764,
-      "distancePct": 0.11089338305217603,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 60.89267015706806,
-      "deltaExposure": -213431883.80316523,
-      "gammaExposure": -5761257.466845703,
-      "vannaExposure": -2641837.6954897917
+      "deltaExposure": -3621941.813043392,
+      "gammaExposure": 66175.54244186655,
+      "vannaExposure": 81367.01922596319
     },
     {
       "strike": 7500,
       "callOi": 764,
       "putOi": 0,
       "totalOi": 764,
-      "distancePct": 1.1612711732532608,
+      "distancePct": 1.1209627474103043,
       "expiryCount": 2,
       "expiryDates": [
         "2026-12-28",
@@ -1925,16 +1943,35 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 61.27879581151832,
-      "deltaExposure": 0.0000012686087227406527,
-      "gammaExposure": 9.987751963739507e-7,
-      "vannaExposure": 0.0000032276611074302903
+      "deltaExposure": 0.000005664720858214436,
+      "gammaExposure": 0.000004362468692943058,
+      "vannaExposure": 0.000013755630247902508
+    },
+    {
+      "strike": 3870,
+      "callOi": 293,
+      "putOi": 467,
+      "totalOi": 760,
+      "distancePct": 0.09441677766371707,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24000000000000002,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 49.98157894736842,
+      "deltaExposure": -121586661.5435925,
+      "gammaExposure": -1792660.8639419107,
+      "vannaExposure": -725627.415584254
     },
     {
       "strike": 4370,
-      "callOi": 391,
+      "callOi": 394,
       "putOi": 362,
-      "totalOi": 753,
-      "distancePct": 0.25930067028223325,
+      "totalOi": 756,
+      "distancePct": 0.2358142941577374,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -1943,17 +1980,17 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 77.7609561752988,
-      "deltaExposure": -118469575.33251372,
-      "gammaExposure": 26484.753634842527,
-      "vannaExposure": 26045.58649344281
+      "daysToExpiry": 77.84656084656085,
+      "deltaExposure": -117996089.81929982,
+      "gammaExposure": 49269.87022428008,
+      "vannaExposure": 44645.95884680393
     },
     {
       "strike": 9000,
       "callOi": 749,
       "putOi": 0,
       "totalOi": 749,
-      "distancePct": 1.5935254079039127,
+      "distancePct": 1.5451552968923652,
       "expiryCount": 2,
       "expiryDates": [
         "2026-12-28",
@@ -1963,34 +2000,15 @@
       "volatilitySource": "fallback-median",
       "daysToExpiry": 38.149532710280376,
       "deltaExposure": 0,
-      "gammaExposure": 2.0695652805190266e-14,
-      "vannaExposure": 8.260240091953996e-14
-    },
-    {
-      "strike": 3250,
-      "callOi": 37,
-      "putOi": 711,
-      "totalOi": 748,
-      "distancePct": -0.06344915825692035,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.23999999999999996,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 50.55213903743316,
-      "deltaExposure": -41587254.60204154,
-      "gammaExposure": -7597579.552701796,
-      "vannaExposure": 1947000.8730947077
+      "gammaExposure": 1.283816993076269e-13,
+      "vannaExposure": 5.023381841359624e-13
     },
     {
       "strike": 4625,
       "callOi": 703,
       "putOi": 18,
       "totalOi": 721,
-      "distancePct": 0.3327838901728441,
+      "distancePct": 0.3079270275696877,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2000,16 +2018,35 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 66.46324549237171,
-      "deltaExposure": -5037429.694353428,
-      "gammaExposure": 280067.5934315923,
-      "vannaExposure": 343062.4782947263
+      "deltaExposure": -4469600.609720118,
+      "gammaExposure": 422637.4765314618,
+      "vannaExposure": 484424.04832078563
+    },
+    {
+      "strike": 3150,
+      "callOi": 175,
+      "putOi": 542,
+      "totalOi": 717,
+      "distancePct": -0.10919564608767214,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24000000000000002,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 38.54672245467224,
+      "deltaExposure": 46102559.869797446,
+      "gammaExposure": -2058433.5319900955,
+      "vannaExposure": 960518.8139639325
     },
     {
       "strike": 5450,
       "callOi": 710,
       "putOi": 0,
       "totalOi": 710,
-      "distancePct": 0.5705237192307028,
+      "distancePct": 0.5412329297848212,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2019,16 +2056,16 @@
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 49.17323943661972,
-      "deltaExposure": 4059.9704990439977,
-      "gammaExposure": 1377.2882217049103,
-      "vannaExposure": 2630.455644166526
+      "deltaExposure": 7755.283238792461,
+      "gammaExposure": 2545.5686217288358,
+      "vannaExposure": 4661.635170974098
     },
     {
       "strike": 4850,
       "callOi": 652,
       "putOi": 23,
       "totalOi": 675,
-      "distancePct": 0.39762202537044194,
+      "distancePct": 0.37155590999199684,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2038,16 +2075,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 45.24888888888889,
-      "deltaExposure": -7886930.570896194,
-      "gammaExposure": 18460.833540720498,
-      "vannaExposure": 26178.494114191162
+      "deltaExposure": -7986490.892681944,
+      "gammaExposure": 33169.82324831725,
+      "vannaExposure": 44419.270098230016
     },
     {
       "strike": 3920,
       "callOi": 274,
       "putOi": 395,
       "totalOi": 669,
-      "distancePct": 0.1296243998870376,
+      "distancePct": 0.10855652931311911,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2056,17 +2093,17 @@
       ],
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 60.2152466367713,
-      "deltaExposure": -109869491.090842,
-      "gammaExposure": -823208.7204189495,
-      "vannaExposure": -434505.0066132962
+      "daysToExpiry": 60.30194319880419,
+      "deltaExposure": -102171407.61079264,
+      "gammaExposure": -1037521.9345827851,
+      "vannaExposure": -466030.32743988954
     },
     {
-      "strike": 3350,
-      "callOi": 0,
-      "putOi": 655,
-      "totalOi": 655,
-      "distancePct": -0.034632209280210206,
+      "strike": 4235,
+      "callOi": 134,
+      "putOi": 506,
+      "totalOi": 640,
+      "distancePct": 0.1976369647043519,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2075,36 +2112,55 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 53.030534351145036,
-      "deltaExposure": -73829701.60600351,
-      "gammaExposure": -9295725.76498223,
-      "vannaExposure": 1211900.770962113
+      "daysToExpiry": 56.553125,
+      "deltaExposure": -170492240.7650292,
+      "gammaExposure": -1066352.9558854254,
+      "vannaExposure": -823555.7633412477
     },
     {
-      "strike": 4235,
-      "callOi": 126,
-      "putOi": 506,
-      "totalOi": 632,
-      "distancePct": 0.22039778916367456,
+      "strike": 3350,
+      "callOi": 1,
+      "putOi": 633,
+      "totalOi": 634,
+      "distancePct": -0.05263663949006402,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24000000000000002,
+      "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 56.30537974683544,
-      "deltaExposure": -169913061.4446949,
-      "gammaExposure": -756441.9072410022,
-      "vannaExposure": -643725.8607384769
+      "daysToExpiry": 53.19085173501577,
+      "deltaExposure": -56258581.52313991,
+      "gammaExposure": -8020461.123654682,
+      "vannaExposure": 1672329.1482573326
+    },
+    {
+      "strike": 4225,
+      "callOi": 483,
+      "putOi": 151,
+      "totalOi": 634,
+      "distancePct": 0.19480901437447148,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 46.102523659305994,
+      "deltaExposure": -47960381.7578637,
+      "gammaExposure": 412424.77291771804,
+      "vannaExposure": 311503.2504643294
     },
     {
       "strike": 5800,
       "callOi": 631,
       "putOi": 0,
       "totalOi": 631,
-      "distancePct": 0.6713830406491883,
+      "distancePct": 0.6402111913306354,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2114,16 +2170,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 48.20760697305864,
-      "deltaExposure": 26.140429434838097,
-      "gammaExposure": 12.254518354756081,
-      "vannaExposure": 26.515007643493718
+      "deltaExposure": 64.17874772263829,
+      "gammaExposure": 29.78195425103106,
+      "vannaExposure": 62.085311351337815
     },
     {
       "strike": 4430,
-      "callOi": 370,
+      "callOi": 369,
       "putOi": 258,
-      "totalOi": 628,
-      "distancePct": 0.27659083966825937,
+      "totalOi": 627,
+      "distancePct": 0.2527819961370198,
       "expiryCount": 2,
       "expiryDates": [
         "2026-12-28",
@@ -2131,36 +2187,17 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 57.05891719745223,
-      "deltaExposure": -87518469.65224797,
-      "gammaExposure": 18004.444428516235,
-      "vannaExposure": 18620.877834758594
-    },
-    {
-      "strike": 4225,
-      "callOi": 474,
-      "putOi": 151,
-      "totalOi": 625,
-      "distancePct": 0.21751609426600355,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 46.2912,
-      "deltaExposure": -48805907.34865646,
-      "gammaExposure": 224688.50730346973,
-      "vannaExposure": 187522.08079064463
+      "daysToExpiry": 57.05103668261563,
+      "deltaExposure": -88224223.39505304,
+      "gammaExposure": 32651.778761972473,
+      "vannaExposure": 31172.872948865446
     },
     {
       "strike": 5520,
       "callOi": 316,
       "putOi": 300,
       "totalOi": 616,
-      "distancePct": 0.5906955835143999,
+      "distancePct": 0.5610285820939841,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2170,54 +2207,35 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 61.339285714285715,
-      "deltaExposure": -103400074.64381078,
-      "gammaExposure": 7.3573407310611065,
-      "vannaExposure": 14.447135908301638
-    },
-    {
-      "strike": 3870,
-      "callOi": 118,
-      "putOi": 467,
-      "totalOi": 585,
-      "distancePct": 0.11521592539868254,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24000000000000002,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 54.817094017094014,
-      "deltaExposure": -135567861.476239,
-      "gammaExposure": -2811632.8046153802,
-      "vannaExposure": -1334631.2340890495
+      "deltaExposure": -105364619.06303458,
+      "gammaExposure": 13.572014510351329,
+      "vannaExposure": 25.585830110971024
     },
     {
       "strike": 3770,
-      "callOi": 365,
-      "putOi": 214,
-      "totalOi": 579,
-      "distancePct": 0.0863989764219724,
+      "callOi": 367,
+      "putOi": 217,
+      "totalOi": 584,
+      "distancePct": 0.06613727436491303,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24000000000000002,
+      "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 54.637305699481864,
-      "deltaExposure": -36362591.74489391,
-      "gammaExposure": 1462277.2003468778,
-      "vannaExposure": 539508.3313271066
+      "daysToExpiry": 54.74486301369863,
+      "deltaExposure": -25302182.673957806,
+      "gammaExposure": 1712924.8077503932,
+      "vannaExposure": 495967.7350655402
     },
     {
       "strike": 4385,
       "callOi": 303,
       "putOi": 267,
       "totalOi": 570,
-      "distancePct": 0.2636232126287398,
+      "distancePct": 0.240056219652558,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2227,35 +2245,54 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 57.49298245614035,
-      "deltaExposure": -90315601.5211668,
-      "gammaExposure": 64270.97218635486,
-      "vannaExposure": 64281.85646805772
+      "deltaExposure": -90905620.15431458,
+      "gammaExposure": 92333.09204295385,
+      "vannaExposure": 85098.29964288419
     },
     {
-      "strike": 3490,
-      "callOi": 3,
-      "putOi": 531,
-      "totalOi": 534,
-      "distancePct": 0.005711519287183998,
+      "strike": 4075,
+      "callOi": 164,
+      "putOi": 374,
+      "totalOi": 538,
+      "distancePct": 0.1523897594262654,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24,
+      "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 60.649812734082396,
-      "deltaExposure": -91765431.89172858,
-      "gammaExposure": -7503041.25120727,
-      "vannaExposure": -325805.6863714318
+      "daysToExpiry": 56.951672862453535,
+      "deltaExposure": -117970983.44650778,
+      "gammaExposure": -894832.2317095066,
+      "vannaExposure": -550493.7965610183
+    },
+    {
+      "strike": 3490,
+      "callOi": 3,
+      "putOi": 533,
+      "totalOi": 536,
+      "distancePct": -0.013045334871738343,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.23999999999999996,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 60.65485074626866,
+      "deltaExposure": -79273337.47629169,
+      "gammaExposure": -7543359.518919275,
+      "vannaExposure": 264099.96717245114
     },
     {
       "strike": 5225,
       "callOi": 532,
       "putOi": 0,
       "totalOi": 532,
-      "distancePct": 0.5056855840331049,
+      "distancePct": 0.47760404736251205,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2265,16 +2302,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 77.47368421052632,
-      "deltaExposure": 52189.338908980346,
-      "gammaExposure": 15917.99165762148,
-      "vannaExposure": 27614.0735755348
+      "deltaExposure": 93343.39283454238,
+      "gammaExposure": 27315.255850780442,
+      "vannaExposure": 45242.86236974639
     },
     {
       "strike": 5775,
       "callOi": 526,
       "putOi": 0,
       "totalOi": 526,
-      "distancePct": 0.6641788034050108,
+      "distancePct": 0.6331413155059344,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2284,16 +2321,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 50.02661596958175,
-      "deltaExposure": 39.10056965469903,
-      "gammaExposure": 17.364239287280803,
-      "vannaExposure": 37.27828793111632
+      "deltaExposure": 91.70839463817106,
+      "gammaExposure": 40.39970173041999,
+      "vannaExposure": 83.53556516325952
     },
     {
-      "strike": 4295,
-      "callOi": 476,
-      "putOi": 42,
-      "totalOi": 518,
-      "distancePct": 0.23768795854970065,
+      "strike": 3960,
+      "callOi": 420,
+      "putOi": 105,
+      "totalOi": 525,
+      "distancePct": 0.11986833063264074,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2302,17 +2339,74 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 54.1042471042471,
-      "deltaExposure": -12135525.229296958,
-      "gammaExposure": 555828.7781475927,
-      "vannaExposure": 504965.8160909604
+      "daysToExpiry": 55.35047619047619,
+      "deltaExposure": -15358079.483162342,
+      "gammaExposure": 2297220.548063377,
+      "vannaExposure": 1128033.9203771814
+    },
+    {
+      "strike": 4570,
+      "callOi": 496,
+      "putOi": 20,
+      "totalOi": 516,
+      "distancePct": 0.2923733007553455,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 36.86821705426357,
+      "deltaExposure": -6845295.110974427,
+      "gammaExposure": 36273.193968543455,
+      "vannaExposure": 39392.198352162755
+    },
+    {
+      "strike": 4135,
+      "callOi": 233,
+      "putOi": 279,
+      "totalOi": 512,
+      "distancePct": 0.16935746140554783,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 69.62109375,
+      "deltaExposure": -84597127.1530182,
+      "gammaExposure": -223782.5709615273,
+      "vannaExposure": -156670.37239209475
+    },
+    {
+      "strike": 3575,
+      "callOi": 65,
+      "putOi": 446,
+      "totalOi": 511,
+      "distancePct": 0.010992242932245107,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 55.136986301369866,
+      "deltaExposure": -72295354.26625851,
+      "gammaExposure": -5491970.349070623,
+      "vannaExposure": -358810.4887809638
     },
     {
       "strike": 2950,
       "callOi": 223,
-      "putOi": 286,
-      "totalOi": 509,
-      "distancePct": -0.14990000518705077,
+      "putOi": 287,
+      "totalOi": 510,
+      "distancePct": -0.16575465268528025,
       "expiryCount": 2,
       "expiryDates": [
         "2026-12-28",
@@ -2320,131 +2414,55 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 60.00589390962672,
-      "deltaExposure": 69310926.40734355,
-      "gammaExposure": -142120.12206503336,
-      "vannaExposure": 93738.93145520137
-    },
-    {
-      "strike": 4135,
-      "callOi": 228,
-      "putOi": 279,
-      "totalOi": 507,
-      "distancePct": 0.19158084018696442,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24000000000000002,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 69.69625246548324,
-      "deltaExposure": -86777725.83953087,
-      "gammaExposure": -217853.1103230393,
-      "vannaExposure": -168737.91064403928
+      "daysToExpiry": 59.95294117647059,
+      "deltaExposure": 73267936.22396548,
+      "gammaExposure": -94877.36696177209,
+      "vannaExposure": 69970.05743868076
     },
     {
       "strike": 4040,
-      "callOi": 171,
+      "callOi": 170,
       "putOi": 335,
-      "totalOi": 506,
-      "distancePct": 0.16420473865908977,
+      "totalOi": 505,
+      "distancePct": 0.14249193327168397,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24,
+      "impliedVol": 0.24000000000000005,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 60.39723320158103,
-      "deltaExposure": -104100508.05516368,
-      "gammaExposure": -832215.1820649037,
-      "vannaExposure": -542879.2948082094
+      "daysToExpiry": 60.45148514851485,
+      "deltaExposure": -101257933.69565172,
+      "gammaExposure": -1095829.8872443934,
+      "vannaExposure": -629484.368146613
     },
     {
-      "strike": 4075,
-      "callOi": 129,
-      "putOi": 374,
-      "totalOi": 503,
-      "distancePct": 0.17429067080093832,
+      "strike": 4140,
+      "callOi": 80,
+      "putOi": 414,
+      "totalOi": 494,
+      "distancePct": 0.17077143657048804,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24,
+      "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 56.312127236580515,
-      "deltaExposure": -120493816.68001583,
-      "gammaExposure": -799703.6589734892,
-      "vannaExposure": -555488.6599723685
-    },
-    {
-      "strike": 4570,
-      "callOi": 476,
-      "putOi": 20,
-      "totalOi": 496,
-      "distancePct": 0.3169345682356535,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 36.79435483870968,
-      "deltaExposure": -6806398.385056224,
-      "gammaExposure": 16243.685026855139,
-      "vannaExposure": 18927.258903880636
-    },
-    {
-      "strike": 3575,
-      "callOi": 51,
-      "putOi": 430,
-      "totalOi": 481,
-      "distancePct": 0.03020592591738762,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24000000000000002,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 56.45738045738046,
-      "deltaExposure": -83496257.80341408,
-      "gammaExposure": -5184887.816703693,
-      "vannaExposure": -745806.4280417829
-    },
-    {
-      "strike": 3960,
-      "callOi": 375,
-      "putOi": 105,
-      "totalOi": 480,
-      "distancePct": 0.14115117947772168,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24000000000000002,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 52.22083333333333,
-      "deltaExposure": -23409718.379416462,
-      "gammaExposure": 1440334.963620695,
-      "vannaExposure": 818130.4267958826
+      "daysToExpiry": 57.59514170040486,
+      "deltaExposure": -136050432.55370954,
+      "gammaExposure": -1393765.0905394398,
+      "vannaExposure": -943524.429829011
     },
     {
       "strike": 4495,
       "callOi": 441,
       "putOi": 36,
       "totalOi": 477,
-      "distancePct": 0.2953218565031209,
+      "distancePct": 0.27116367328124247,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2454,54 +2472,35 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 40.276729559748425,
-      "deltaExposure": -12158168.825751217,
-      "gammaExposure": 47161.1459009608,
-      "vannaExposure": 51794.10559731751
+      "deltaExposure": -12194647.573498141,
+      "gammaExposure": 84911.4296484262,
+      "vannaExposure": 86471.19705367733
     },
     {
       "strike": 4480,
-      "callOi": 319,
+      "callOi": 317,
       "putOi": 156,
-      "totalOi": 475,
-      "distancePct": 0.2909993141566144,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 50.52,
-      "deltaExposure": -53045648.15498708,
-      "gammaExposure": 76646.63371923566,
-      "vannaExposure": 83282.24441821405
-    },
-    {
-      "strike": 4140,
-      "callOi": 59,
-      "putOi": 414,
       "totalOi": 473,
-      "distancePct": 0.19302168763579994,
+      "distancePct": 0.26692174778642186,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24,
+      "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 58.68710359408034,
-      "deltaExposure": -136580081.0400015,
-      "gammaExposure": -1016058.6666805531,
-      "vannaExposure": -767368.0191122976
+      "daysToExpiry": 50.471458773784356,
+      "deltaExposure": -53607402.97503041,
+      "gammaExposure": 120002.96104760199,
+      "vannaExposure": 120933.19978150302
     },
     {
       "strike": 4475,
       "callOi": 329,
       "putOi": 137,
       "totalOi": 466,
-      "distancePct": 0.2895584667077789,
+      "distancePct": 0.2655077726214816,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2511,16 +2510,16 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 44.663090128755364,
-      "deltaExposure": -46767450.01345447,
-      "gammaExposure": 30490.33211048568,
-      "vannaExposure": 32818.94212557735
+      "deltaExposure": -47336361.94146967,
+      "gammaExposure": 55733.65212110267,
+      "vannaExposure": 55602.13786310379
     },
     {
       "strike": 3875,
-      "callOi": 116,
-      "putOi": 345,
+      "callOi": 114,
+      "putOi": 347,
       "totalOi": 461,
-      "distancePct": 0.11665677284751805,
+      "distancePct": 0.09583075282865729,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2529,17 +2528,36 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 49.36876355748373,
-      "deltaExposure": -101888780.21675223,
-      "gammaExposure": -1742297.5065765367,
-      "vannaExposure": -837690.0453212806
+      "daysToExpiry": 49.49457700650759,
+      "deltaExposure": -97352297.6634918,
+      "gammaExposure": -2201825.8043494667,
+      "vannaExposure": -884909.706131544
+    },
+    {
+      "strike": 2800,
+      "callOi": 120,
+      "putOi": 339,
+      "totalOi": 459,
+      "distancePct": -0.20817390763348634,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24000000000000002,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 61.86274509803921,
+      "deltaExposure": 40718797.496658266,
+      "gammaExposure": -174523.5123310996,
+      "vannaExposure": 165345.16940965923
     },
     {
       "strike": 3945,
       "callOi": 299,
       "putOi": 152,
       "totalOi": 451,
-      "distancePct": 0.13682863713121515,
+      "distancePct": 0.11562640513782012,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2549,16 +2567,35 @@
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 76.88248337028824,
-      "deltaExposure": -32390521.003571182,
-      "gammaExposure": 1097272.239772519,
-      "vannaExposure": 621228.0742799855
+      "deltaExposure": -26986982.482428204,
+      "gammaExposure": 1246085.5126388287,
+      "vannaExposure": 608812.8340698143
+    },
+    {
+      "strike": 4005,
+      "callOi": 267,
+      "putOi": 183,
+      "totalOi": 450,
+      "distancePct": 0.13259410711710257,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 58.69111111111111,
+      "deltaExposure": -47840141.61731811,
+      "gammaExposure": 583674.5241820551,
+      "vannaExposure": 313711.0292742648
     },
     {
       "strike": 3545,
       "callOi": 26,
       "putOi": 423,
       "totalOi": 449,
-      "distancePct": 0.021560841224374575,
+      "distancePct": 0.002508391942603889,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2568,92 +2605,16 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 60.799554565701555,
-      "deltaExposure": -78971210.43190157,
-      "gammaExposure": -5542502.68953583,
-      "vannaExposure": -602282.1737163729
-    },
-    {
-      "strike": 4005,
-      "callOi": 263,
-      "putOi": 184,
-      "totalOi": 447,
-      "distancePct": 0.15411880651724125,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.23999999999999996,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 58.92841163310962,
-      "deltaExposure": -51997822.517361656,
-      "gammaExposure": 427065.1996916961,
-      "vannaExposure": 262961.570736483
-    },
-    {
-      "strike": 3975,
-      "callOi": 226,
-      "putOi": 219,
-      "totalOi": 445,
-      "distancePct": 0.14547372182422819,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 50.2247191011236,
-      "deltaExposure": -65190770.663170174,
-      "gammaExposure": 106058.53967973619,
-      "vannaExposure": 62821.80190005648
-    },
-    {
-      "strike": 3325,
-      "callOi": 0,
-      "putOi": 437,
-      "totalOi": 437,
-      "distancePct": -0.04183644652438774,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 41.755148741418765,
-      "deltaExposure": -41993915.36181691,
-      "gammaExposure": -6462132.697280984,
-      "vannaExposure": 1066099.2657815812
-    },
-    {
-      "strike": 3150,
-      "callOi": 175,
-      "putOi": 258,
-      "totalOi": 433,
-      "distancePct": -0.09226610723363049,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 40.37644341801386,
-      "deltaExposure": 45568634.22155245,
-      "gammaExposure": -674294.3053662801,
-      "vannaExposure": 256210.28051164962
+      "deltaExposure": -68283530.69360816,
+      "gammaExposure": -5734559.110252947,
+      "vannaExposure": -173198.56370672636
     },
     {
       "strike": 3675,
-      "callOi": 45,
-      "putOi": 380,
-      "totalOi": 425,
-      "distancePct": 0.059022874894097764,
+      "callOi": 64,
+      "putOi": 384,
+      "totalOi": 448,
+      "distancePct": 0.03927174623104917,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2662,34 +2623,17 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 41.36470588235294,
-      "deltaExposure": -95790244.5694158,
-      "gammaExposure": -4851380.08601744,
-      "vannaExposure": -1209251.285027908
+      "daysToExpiry": 41.904017857142854,
+      "deltaExposure": -84075784.27914928,
+      "gammaExposure": -5622373.201806403,
+      "vannaExposure": -959028.2675607067
     },
     {
-      "strike": 10000,
-      "callOi": 425,
-      "putOi": 0,
-      "totalOi": 425,
-      "distancePct": 1.8816948976710142,
-      "expiryCount": 1,
-      "expiryDates": [
-        "2026-12-28"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 33,
-      "deltaExposure": 0,
-      "gammaExposure": 2.698528550713293e-40,
-      "vannaExposure": 1.1929547781946447e-39
-    },
-    {
-      "strike": 3820,
-      "callOi": 179,
-      "putOi": 238,
-      "totalOi": 417,
-      "distancePct": 0.10080745091032747,
+      "strike": 3975,
+      "callOi": 221,
+      "putOi": 219,
+      "totalOi": 440,
+      "distancePct": 0.12411025612746135,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2698,17 +2642,17 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 40.37170263788969,
-      "deltaExposure": -65445325.28884675,
-      "gammaExposure": -537625.8313366761,
-      "vannaExposure": -229613.98774893134
+      "daysToExpiry": 49.893181818181816,
+      "deltaExposure": -61947242.01929461,
+      "gammaExposure": 65151.62547485206,
+      "vannaExposure": 34091.60967406013
     },
     {
       "strike": 4365,
-      "callOi": 340,
+      "callOi": 365,
       "putOi": 73,
-      "totalOi": 413,
-      "distancePct": 0.25785982283339776,
+      "totalOi": 438,
+      "distancePct": 0.23440031899279717,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2717,17 +2661,91 @@
       ],
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 39.3728813559322,
-      "deltaExposure": -24706965.73001722,
-      "gammaExposure": 26710.49601757233,
-      "vannaExposure": 25834.690115138466
+      "daysToExpiry": 40.730593607305934,
+      "deltaExposure": -24648142.14510433,
+      "gammaExposure": 107661.6250083889,
+      "vannaExposure": 96007.9793875887
+    },
+    {
+      "strike": 3325,
+      "callOi": 0,
+      "putOi": 429,
+      "totalOi": 429,
+      "distancePct": -0.05970651531476504,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24000000000000002,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 42.45920745920746,
+      "deltaExposure": -31036200.52496171,
+      "gammaExposure": -5385324.123977416,
+      "vannaExposure": 1308699.5312778302
+    },
+    {
+      "strike": 10000,
+      "callOi": 425,
+      "putOi": 0,
+      "totalOi": 425,
+      "distancePct": 1.8279503298804058,
+      "expiryCount": 1,
+      "expiryDates": [
+        "2026-12-28"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 33,
+      "deltaExposure": 0,
+      "gammaExposure": 1.2081653059666564e-38,
+      "vannaExposure": 5.246236443886304e-38
+    },
+    {
+      "strike": 3820,
+      "callOi": 185,
+      "putOi": 238,
+      "totalOi": 423,
+      "distancePct": 0.08027702601431505,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 40.678486997635936,
+      "deltaExposure": -58441836.03506299,
+      "gammaExposure": -537552.9885976724,
+      "vannaExposure": -188173.3617191814
+    },
+    {
+      "strike": 4590,
+      "callOi": 414,
+      "putOi": 0,
+      "totalOi": 414,
+      "distancePct": 0.2980292014151063,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 67.60386473429952,
+      "deltaExposure": 1128392.3831323967,
+      "gammaExposure": 274435.3896163445,
+      "vannaExposure": 305155.13462087
     },
     {
       "strike": 4210,
       "callOi": 345,
       "putOi": 62,
       "totalOi": 407,
-      "distancePct": 0.21319355191949702,
+      "distancePct": 0.19056708887965088,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2737,16 +2755,16 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 44.90909090909091,
-      "deltaExposure": -19368202.812414646,
-      "gammaExposure": 347635.0616020387,
-      "vannaExposure": 286676.4028575538
+      "deltaExposure": -18518198.30839157,
+      "gammaExposure": 546230.048459403,
+      "vannaExposure": 406982.55493269
     },
     {
-      "strike": 2800,
-      "callOi": 120,
-      "putOi": 286,
-      "totalOi": 406,
-      "distancePct": -0.193125428652116,
+      "strike": 4440,
+      "callOi": 336,
+      "putOi": 67,
+      "totalOi": 403,
+      "distancePct": 0.2556099464669002,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2755,17 +2773,55 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 62.110837438423644,
-      "deltaExposure": 39405005.506809965,
-      "gammaExposure": -194456.6178510444,
-      "vannaExposure": 169190.80535390467
+      "daysToExpiry": 49.71712158808933,
+      "deltaExposure": -22097901.49827963,
+      "gammaExposure": 52279.612763260215,
+      "vannaExposure": 50333.5406597348
     },
     {
-      "strike": 4440,
+      "strike": 4520,
       "callOi": 336,
       "putOi": 66,
       "totalOi": 402,
-      "distancePct": 0.27947253456593035,
+      "distancePct": 0.27823354910594345,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24000000000000002,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 52.50995024875622,
+      "deltaExposure": -22419198.68842218,
+      "gammaExposure": 132343.9077528111,
+      "vannaExposure": 138191.8415903731
+    },
+    {
+      "strike": 3880,
+      "callOi": 110,
+      "putOi": 291,
+      "totalOi": 401,
+      "distancePct": 0.09724472799359749,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 53.1571072319202,
+      "deltaExposure": -79767961.30010854,
+      "gammaExposure": -1727087.8857467882,
+      "vannaExposure": -707651.2405421921
+    },
+    {
+      "strike": 3580,
+      "callOi": 194,
+      "putOi": 205,
+      "totalOi": 399,
+      "distancePct": 0.01240621809718531,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2774,17 +2830,36 @@
       ],
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 49.6865671641791,
-      "deltaExposure": -21793565.013468847,
-      "gammaExposure": 26007.929160066065,
-      "vannaExposure": 27121.933471897297
+      "daysToExpiry": 45.51127819548872,
+      "deltaExposure": -8077899.395790808,
+      "gammaExposure": 224238.7530951487,
+      "vannaExposure": 2485.8689223530346
+    },
+    {
+      "strike": 3710,
+      "callOi": 29,
+      "putOi": 369,
+      "totalOi": 398,
+      "distancePct": 0.049169572385630585,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 37.42964824120603,
+      "deltaExposure": -91508023.14312157,
+      "gammaExposure": -5367513.096292623,
+      "vannaExposure": -1134384.0497975203
     },
     {
       "strike": 5150,
       "callOi": 395,
       "putOi": 0,
       "totalOi": 395,
-      "distancePct": 0.4840728723005724,
+      "distancePct": 0.456394419888409,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2794,35 +2869,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 48.060759493670886,
-      "deltaExposure": 11974.652638806863,
-      "gammaExposure": 3711.032087996528,
-      "vannaExposure": 6208.913848696038
-    },
-    {
-      "strike": 4520,
-      "callOi": 325,
-      "putOi": 66,
-      "totalOi": 391,
-      "distancePct": 0.3025260937472985,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24000000000000002,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 51.45524296675192,
-      "deltaExposure": -22370225.956325408,
-      "gammaExposure": 68496.89654853057,
-      "vannaExposure": 76831.21476204087
+      "deltaExposure": 21667.305823347608,
+      "gammaExposure": 6501.858079329267,
+      "vannaExposure": 10366.162966732996
     },
     {
       "strike": 5700,
       "callOi": 391,
       "putOi": 0,
       "totalOi": 391,
-      "distancePct": 0.6425660916724781,
+      "distancePct": 0.6119316880318314,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2832,16 +2888,16 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 55.734015345268546,
-      "deltaExposure": 325.4408842741382,
-      "gammaExposure": 122.14580480612523,
-      "vannaExposure": 256.05658705393256
+      "deltaExposure": 666.4691011453031,
+      "gammaExposure": 243.8929503991976,
+      "vannaExposure": 492.0735627761685
     },
     {
       "strike": 4215,
       "callOi": 219,
       "putOi": 170,
       "totalOi": 389,
-      "distancePct": 0.21463439936833253,
+      "distancePct": 0.1919810640445911,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2851,16 +2907,35 @@
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 60.123393316195376,
-      "deltaExposure": -54739323.59439662,
-      "gammaExposure": -46765.321402512345,
-      "vannaExposure": -41485.89355191367
+      "deltaExposure": -54043763.836673915,
+      "gammaExposure": -15663.02063110948,
+      "vannaExposure": -15336.661888147995
+    },
+    {
+      "strike": 3775,
+      "callOi": 181,
+      "putOi": 206,
+      "totalOi": 387,
+      "distancePct": 0.06755124952985322,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 36.276485788113696,
+      "deltaExposure": -45230758.74732227,
+      "gammaExposure": -281371.3245887681,
+      "vannaExposure": -83264.0767229284
     },
     {
       "strike": 5175,
       "callOi": 387,
       "putOi": 0,
       "totalOi": 387,
-      "distancePct": 0.4912771095447499,
+      "distancePct": 0.46346429571311004,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2870,35 +2945,16 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 44.22739018087855,
-      "deltaExposure": 2440.996223092483,
-      "gammaExposure": 932.2721225832327,
-      "vannaExposure": 1573.6857294720724
+      "deltaExposure": 5060.3696837556845,
+      "gammaExposure": 1883.5047505414707,
+      "vannaExposure": 3030.8400531309794
     },
     {
-      "strike": 3775,
-      "callOi": 188,
-      "putOi": 198,
-      "totalOi": 386,
-      "distancePct": 0.08783982387080791,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.23999999999999996,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 36.432642487046635,
-      "deltaExposure": -49999061.11653072,
-      "gammaExposure": -95448.68790735229,
-      "vannaExposure": -37473.693489781734
-    },
-    {
-      "strike": 3580,
-      "callOi": 193,
-      "putOi": 187,
+      "strike": 3725,
+      "callOi": 76,
+      "putOi": 304,
       "totalOi": 380,
-      "distancePct": 0.031646773366223124,
+      "distancePct": 0.05341149788045119,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2907,17 +2963,17 @@
       ],
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 45.07368421052632,
-      "deltaExposure": -16609982.070828231,
-      "gammaExposure": 410423.2860961623,
-      "vannaExposure": 48527.149958217
+      "daysToExpiry": 60.213157894736845,
+      "deltaExposure": -66191582.835026145,
+      "gammaExposure": -3000540.6820654687,
+      "vannaExposure": -705781.8513391821
     },
     {
-      "strike": 5900,
-      "callOi": 379,
-      "putOi": 0,
+      "strike": 3720,
+      "callOi": 90,
+      "putOi": 289,
       "totalOi": 379,
-      "distancePct": 0.7001999896258985,
+      "distancePct": 0.051997522715510995,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2926,17 +2982,55 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 46.67282321899736,
-      "deltaExposure": 129.11938463397794,
-      "gammaExposure": 49.96893673614568,
-      "vannaExposure": 111.9775112345495
+      "daysToExpiry": 42.82849604221636,
+      "deltaExposure": -65104612.49160861,
+      "gammaExposure": -3031246.9842770607,
+      "vannaExposure": -676248.1562685807
+    },
+    {
+      "strike": 5900,
+      "callOi": 378,
+      "putOi": 0,
+      "totalOi": 378,
+      "distancePct": 0.6684906946294394,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 46.55820105820106,
+      "deltaExposure": 265.6144943638582,
+      "gammaExposure": 99.53539250535745,
+      "vannaExposure": 215.24184240754946
+    },
+    {
+      "strike": 4165,
+      "callOi": 171,
+      "putOi": 206,
+      "totalOi": 377,
+      "distancePct": 0.17784131239518905,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24000000000000002,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 57.352785145888596,
+      "deltaExposure": -66073568.64423746,
+      "gammaExposure": -111944.85948957255,
+      "vannaExposure": -80776.3281595993
     },
     {
       "strike": 5190,
       "callOi": 377,
       "putOi": 0,
       "totalOi": 377,
-      "distancePct": 0.49559965189125643,
+      "distancePct": 0.46770622120793065,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -2946,35 +3040,35 @@
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 88.11405835543766,
-      "deltaExposure": 56576.70410760859,
-      "gammaExposure": 16998.10791298244,
-      "vannaExposure": 29012.01015469095
+      "deltaExposure": 100323.63397235954,
+      "gammaExposure": 28899.173011368704,
+      "vannaExposure": 47057.48741090206
     },
     {
-      "strike": 4165,
-      "callOi": 169,
-      "putOi": 206,
-      "totalOi": 375,
-      "distancePct": 0.20022592487997745,
+      "strike": 3610,
+      "callOi": 114,
+      "putOi": 257,
+      "totalOi": 371,
+      "distancePct": 0.020890069086826526,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.23999999999999996,
+      "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 57.946666666666665,
-      "deltaExposure": -66751885.912591375,
-      "gammaExposure": -81637.16482474332,
-      "vannaExposure": -65521.49940717839
+      "daysToExpiry": 46.56873315363882,
+      "deltaExposure": -36252272.443228886,
+      "gammaExposure": -2119194.7189003993,
+      "vannaExposure": -222717.48282261108
     },
     {
       "strike": 5725,
       "callOi": 370,
       "putOi": 0,
       "totalOi": 370,
-      "distancePct": 0.6497703289166556,
+      "distancePct": 0.6190015638565324,
       "expiryCount": 2,
       "expiryDates": [
         "2026-12-28",
@@ -2983,35 +3077,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 58.31621621621622,
-      "deltaExposure": 30.05825170908269,
-      "gammaExposure": 15.770359365320363,
-      "vannaExposure": 33.21816799492003
-    },
-    {
-      "strike": 3610,
-      "callOi": 113,
-      "putOi": 255,
-      "totalOi": 368,
-      "distancePct": 0.04029185805923617,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 46.67934782608695,
-      "deltaExposure": -46445560.719887465,
-      "gammaExposure": -1928992.598059699,
-      "vannaExposure": -354705.7269142543
+      "deltaExposure": 80.92346610043866,
+      "gammaExposure": 40.96642097836159,
+      "vannaExposure": 83.07677495387371
     },
     {
       "strike": 4845,
       "callOi": 344,
       "putOi": 24,
       "totalOi": 368,
-      "distancePct": 0.39618117792160645,
+      "distancePct": 0.37014193482705665,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3021,16 +3096,16 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 36.13858695652174,
-      "deltaExposure": -8284975.2257169485,
-      "gammaExposure": 2821.275825668246,
-      "vannaExposure": 3991.691302327713
+      "deltaExposure": -8434182.3805357,
+      "gammaExposure": 5073.750999534895,
+      "vannaExposure": 6775.480361601142
     },
     {
-      "strike": 3710,
-      "callOi": 18,
-      "putOi": 348,
+      "strike": 3620,
+      "callOi": 86,
+      "putOi": 280,
       "totalOi": 366,
-      "distancePct": 0.06910880703594631,
+      "distancePct": 0.023718019416706933,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3039,55 +3114,74 @@
       ],
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 36.7103825136612,
-      "deltaExposure": -95449116.90406582,
-      "gammaExposure": -4210110.623094603,
-      "vannaExposure": -1220521.4569160903
-    },
-    {
-      "strike": 3720,
-      "callOi": 86,
-      "putOi": 277,
-      "totalOi": 363,
-      "distancePct": 0.07199050193361732,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24000000000000002,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 42.47107438016529,
-      "deltaExposure": -70403752.11052579,
-      "gammaExposure": -2337875.152207623,
-      "vannaExposure": -705677.1971677502
+      "daysToExpiry": 52.68032786885246,
+      "deltaExposure": -46026027.25202267,
+      "gammaExposure": -3464926.7248227648,
+      "vannaExposure": -380480.1069435687
     },
     {
       "strike": 3760,
-      "callOi": 123,
+      "callOi": 125,
       "putOi": 240,
-      "totalOi": 363,
-      "distancePct": 0.08351728152430138,
+      "totalOi": 365,
+      "distancePct": 0.06330932403503262,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24000000000000002,
+      "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 43.67768595041322,
-      "deltaExposure": -61603988.39259867,
-      "gammaExposure": -1282941.3077475526,
-      "vannaExposure": -433775.76150204387
+      "daysToExpiry": 43.93150684931507,
+      "deltaExposure": -54317443.3860756,
+      "gammaExposure": -1789436.4448259617,
+      "vannaExposure": -466385.84887497075
+    },
+    {
+      "strike": 4090,
+      "callOi": 249,
+      "putOi": 110,
+      "totalOi": 359,
+      "distancePct": 0.156631684921086,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 48.4066852367688,
+      "deltaExposure": -32063760.419550646,
+      "gammaExposure": 380320.75610746496,
+      "vannaExposure": 235069.18236004596
+    },
+    {
+      "strike": 4620,
+      "callOi": 337,
+      "putOi": 21,
+      "totalOi": 358,
+      "distancePct": 0.3065130524047475,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.23999999999999996,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 46.88268156424581,
+      "deltaExposure": -7108744.677459871,
+      "gammaExposure": 80198.65415427767,
+      "vannaExposure": 91119.62870168037
     },
     {
       "strike": 3935,
       "callOi": 58,
-      "putOi": 294,
-      "totalOi": 352,
-      "distancePct": 0.13394694223354414,
+      "putOi": 296,
+      "totalOi": 354,
+      "distancePct": 0.11279845480793972,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3096,36 +3190,17 @@
       ],
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 74.44886363636364,
-      "deltaExposure": -85473470.14558624,
-      "gammaExposure": -1631182.1992509246,
-      "vannaExposure": -900971.9147723241
-    },
-    {
-      "strike": 4620,
-      "callOi": 331,
-      "putOi": 21,
-      "totalOi": 352,
-      "distancePct": 0.3313430427240086,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.23999999999999996,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 47.11931818181818,
-      "deltaExposure": -7094337.676438744,
-      "gammaExposure": 47810.22597446159,
-      "vannaExposure": 58096.1065959318
+      "daysToExpiry": 74.37853107344633,
+      "deltaExposure": -82878290.3513717,
+      "gammaExposure": -1957947.6255961047,
+      "vannaExposure": -927476.2033571289
     },
     {
       "strike": 5105,
       "callOi": 346,
       "putOi": 0,
       "totalOi": 346,
-      "distancePct": 0.4711052452610528,
+      "distancePct": 0.4436686434039472,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3135,16 +3210,35 @@
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 60.29190751445087,
-      "deltaExposure": 8903.434395632004,
-      "gammaExposure": 3332.2898098855985,
-      "vannaExposure": 5434.978631988093
+      "deltaExposure": 18173.23368377735,
+      "gammaExposure": 6604.219765943268,
+      "vannaExposure": 10251.073668870547
+    },
+    {
+      "strike": 4290,
+      "callOi": 331,
+      "putOi": 10,
+      "totalOi": 341,
+      "distancePct": 0.21319069151869413,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24000000000000002,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 61.29618768328446,
+      "deltaExposure": 124877.52848313795,
+      "gammaExposure": 681802.7681323615,
+      "vannaExposure": 566183.4574137344
     },
     {
       "strike": 4615,
       "callOi": 339,
       "putOi": 2,
       "totalOi": 341,
-      "distancePct": 0.3299021952751731,
+      "distancePct": 0.30509907723980734,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3154,16 +3248,73 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 68.87683284457478,
-      "deltaExposure": -136644.82519626647,
-      "gammaExposure": 137410.03862816753,
-      "vannaExposure": 166869.1855821368
+      "deltaExposure": 189670.3324318694,
+      "gammaExposure": 212357.72347772866,
+      "vannaExposure": 241147.53935256827
+    },
+    {
+      "strike": 3730,
+      "callOi": 104,
+      "putOi": 236,
+      "totalOi": 340,
+      "distancePct": 0.0548254730453914,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 36.65882352941176,
+      "deltaExposure": -53244944.22774351,
+      "gammaExposure": -1995126.7254318218,
+      "vannaExposure": -465919.3373048503
+    },
+    {
+      "strike": 3790,
+      "callOi": 29,
+      "putOi": 311,
+      "totalOi": 340,
+      "distancePct": 0.07179317502467383,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 53.72941176470588,
+      "deltaExposure": -81653096.81531376,
+      "gammaExposure": -3387504.7049515517,
+      "vannaExposure": -1032776.9412929941
+    },
+    {
+      "strike": 3980,
+      "callOi": 192,
+      "putOi": 147,
+      "totalOi": 339,
+      "distancePct": 0.12552423129240153,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24000000000000005,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 51.37463126843658,
+      "deltaExposure": -39996369.62912877,
+      "gammaExposure": 136602.9267486466,
+      "vannaExposure": 64281.243492271606
     },
     {
       "strike": 4770,
       "callOi": 338,
       "putOi": 0,
       "totalOi": 338,
-      "distancePct": 0.37456846618907386,
+      "distancePct": 0.3489323073529536,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3173,35 +3324,16 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 61.0414201183432,
-      "deltaExposure": 152090.98937989553,
-      "gammaExposure": 42881.074481055126,
-      "vannaExposure": 57936.87992404017
-    },
-    {
-      "strike": 3790,
-      "callOi": 26,
-      "putOi": 311,
-      "totalOi": 337,
-      "distancePct": 0.09216236621731443,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 53.91394658753709,
-      "deltaExposure": -87037328.271683,
-      "gammaExposure": -2755457.700971724,
-      "vannaExposure": -1056777.5409959045
+      "deltaExposure": 261145.09777813643,
+      "gammaExposure": 71108.87450706318,
+      "vannaExposure": 90465.6571316972
     },
     {
       "strike": 4420,
       "callOi": 316,
       "putOi": 21,
       "totalOi": 337,
-      "distancePct": 0.27370914477058833,
+      "distancePct": 0.2499540458071394,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3211,16 +3343,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 37.75074183976261,
-      "deltaExposure": -6969220.087226624,
-      "gammaExposure": 33446.37705470348,
-      "vannaExposure": 34231.49371751041
+      "deltaExposure": -6926125.308118958,
+      "gammaExposure": 68681.33355349053,
+      "vannaExposure": 64814.398907009934
     },
     {
-      "strike": 4590,
-      "callOi": 335,
-      "putOi": 0,
-      "totalOi": 335,
-      "distancePct": 0.32269795803099555,
+      "strike": 3985,
+      "callOi": 159,
+      "putOi": 177,
+      "totalOi": 336,
+      "distancePct": 0.12693820645734175,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3229,36 +3361,36 @@
       ],
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 68.92537313432835,
-      "deltaExposure": 619137.4632509641,
-      "gammaExposure": 152805.93570052454,
-      "vannaExposure": 182075.0287016409
+      "daysToExpiry": 54.714285714285715,
+      "deltaExposure": -49816188.78008178,
+      "gammaExposure": -197570.73665498133,
+      "vannaExposure": -103966.39891312874
     },
     {
-      "strike": 3620,
-      "callOi": 56,
-      "putOi": 278,
-      "totalOi": 334,
-      "distancePct": 0.04317355295690718,
+      "strike": 4270,
+      "callOi": 179,
+      "putOi": 156,
+      "totalOi": 335,
+      "distancePct": 0.2075347908589333,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24,
+      "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 54.30538922155689,
-      "deltaExposure": -58237811.7652,
-      "gammaExposure": -3527930.090220447,
-      "vannaExposure": -663875.1902497823
+      "daysToExpiry": 50.96417910447761,
+      "deltaExposure": -52166997.57825805,
+      "gammaExposure": 43992.91794038426,
+      "vannaExposure": 35471.646767923245
     },
     {
       "strike": 3885,
       "callOi": 55,
       "putOi": 279,
       "totalOi": 334,
-      "distancePct": 0.11953846774518906,
+      "distancePct": 0.09865870315853768,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3268,35 +3400,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 58.48203592814371,
-      "deltaExposure": -81520548.49981576,
-      "gammaExposure": -1683689.7361563894,
-      "vannaExposure": -826180.0414252633
-    },
-    {
-      "strike": 4270,
-      "callOi": 178,
-      "putOi": 156,
-      "totalOi": 334,
-      "distancePct": 0.2304837213055231,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 50.9311377245509,
-      "deltaExposure": -52076733.36042855,
-      "gammaExposure": 27471.567725772587,
-      "vannaExposure": 24323.162414934075
+      "deltaExposure": -77787078.35983434,
+      "gammaExposure": -2094457.9670092827,
+      "vannaExposure": -863137.5253662763
     },
     {
       "strike": 4870,
-      "callOi": 333,
+      "callOi": 332,
       "putOi": 0,
-      "totalOi": 333,
-      "distancePct": 0.40338541516578397,
+      "totalOi": 332,
+      "distancePct": 0.3772118106517577,
       "expiryCount": 2,
       "expiryDates": [
         "2026-12-28",
@@ -3304,17 +3417,17 @@
       ],
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 40.57657657657658,
-      "deltaExposure": 11139.231069984788,
-      "gammaExposure": 4134.242096779381,
-      "vannaExposure": 5921.08584069369
+      "daysToExpiry": 40.51204819277108,
+      "deltaExposure": 22238.883473949365,
+      "gammaExposure": 7907.107399523275,
+      "vannaExposure": 10703.127889806528
     },
     {
-      "strike": 3880,
-      "callOi": 41,
-      "putOi": 291,
-      "totalOi": 332,
-      "distancePct": 0.11809762029635355,
+      "strike": 4180,
+      "callOi": 119,
+      "putOi": 210,
+      "totalOi": 329,
+      "distancePct": 0.18208323789000966,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3323,36 +3436,17 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 57.346385542168676,
-      "deltaExposure": -85944586.72553611,
-      "gammaExposure": -1868775.7444396643,
-      "vannaExposure": -906911.169896341
-    },
-    {
-      "strike": 3980,
-      "callOi": 180,
-      "putOi": 147,
-      "totalOi": 327,
-      "distancePct": 0.1469145692730637,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24000000000000002,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 51.87155963302752,
-      "deltaExposure": -42919208.77689303,
-      "gammaExposure": -23876.15077701409,
-      "vannaExposure": -17591.87488517678
+      "daysToExpiry": 47.60790273556231,
+      "deltaExposure": -70301564.80410036,
+      "gammaExposure": -203048.92326403453,
+      "vannaExposure": -144704.27922125062
     },
     {
       "strike": 4330,
-      "callOi": 240,
+      "callOi": 243,
       "putOi": 85,
-      "totalOi": 325,
-      "distancePct": 0.2477738906915492,
+      "totalOi": 328,
+      "distancePct": 0.22450249283821574,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3361,55 +3455,17 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 40.88307692307692,
-      "deltaExposure": -28775639.576629028,
-      "gammaExposure": 85924.11380117071,
-      "vannaExposure": 81140.93923376713
-    },
-    {
-      "strike": 4035,
-      "callOi": 89,
-      "putOi": 235,
-      "totalOi": 324,
-      "distancePct": 0.16276389121025428,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.23999999999999996,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 72.64506172839506,
-      "deltaExposure": -71237809.1885926,
-      "gammaExposure": -897147.7744982662,
-      "vannaExposure": -591555.7443798283
-    },
-    {
-      "strike": 3730,
-      "callOi": 86,
-      "putOi": 237,
-      "totalOi": 323,
-      "distancePct": 0.07487219683128835,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 35.863777089783284,
-      "deltaExposure": -62376980.37220471,
-      "gammaExposure": -1797093.1861508235,
-      "vannaExposure": -561793.6980960805
+      "daysToExpiry": 41.16463414634146,
+      "deltaExposure": -28900567.93742857,
+      "gammaExposure": 145703.0820757787,
+      "vannaExposure": 125934.01314337805
     },
     {
       "strike": 4030,
-      "callOi": 66,
+      "callOi": 68,
       "putOi": 257,
-      "totalOi": 323,
-      "distancePct": 0.16132304376141876,
+      "totalOi": 325,
+      "distancePct": 0.13966398294180357,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3418,36 +3474,17 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 44.8328173374613,
-      "deltaExposure": -84134041.41787545,
-      "gammaExposure": -569684.5123099104,
-      "vannaExposure": -363401.1201358264
-    },
-    {
-      "strike": 4090,
-      "callOi": 213,
-      "putOi": 110,
-      "totalOi": 323,
-      "distancePct": 0.17861321314744485,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 50.12383900928793,
-      "deltaExposure": -33843598.09952056,
-      "gammaExposure": 161247.5653305775,
-      "vannaExposure": 112487.22967218784
+      "daysToExpiry": 44.76,
+      "deltaExposure": -83193602.79198638,
+      "gammaExposure": -867026.9735650368,
+      "vannaExposure": -484597.9488863141
     },
     {
       "strike": 4540,
       "callOi": 316,
       "putOi": 7,
       "totalOi": 323,
-      "distancePct": 0.3082894835426405,
+      "distancePct": 0.2838894497657043,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3457,16 +3494,35 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 46.89473684210526,
-      "deltaExposure": -2185207.8456447218,
-      "gammaExposure": 58472.090358718335,
-      "vannaExposure": 66617.41447491325
+      "deltaExposure": -2059586.1269131126,
+      "gammaExposure": 100755.44467704151,
+      "vannaExposure": 106860.86931650098
+    },
+    {
+      "strike": 4035,
+      "callOi": 87,
+      "putOi": 235,
+      "totalOi": 322,
+      "distancePct": 0.14107795810674378,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 72.7111801242236,
+      "deltaExposure": -69306227.606071,
+      "gammaExposure": -1075201.20723324,
+      "vannaExposure": -625056.7151955678
     },
     {
       "strike": 4765,
       "callOi": 311,
       "putOi": 10,
       "totalOi": 321,
-      "distancePct": 0.3731276187402383,
+      "distancePct": 0.3475183321880134,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3476,35 +3532,16 @@
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 83.83177570093459,
-      "deltaExposure": -3006843.115212795,
-      "gammaExposure": 106993.48826639341,
-      "vannaExposure": 144515.97013433522
-    },
-    {
-      "strike": 4180,
-      "callOi": 110,
-      "putOi": 210,
-      "totalOi": 320,
-      "distancePct": 0.20454846722648398,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 47.203125,
-      "deltaExposure": -70368454.05670384,
-      "gammaExposure": -150075.1153100865,
-      "vannaExposure": -118886.01219638999
+      "deltaExposure": -2806485.823486437,
+      "gammaExposure": 162785.49349688296,
+      "vannaExposure": 207100.74652761297
     },
     {
       "strike": 5380,
       "callOi": 319,
       "putOi": 0,
       "totalOi": 319,
-      "distancePct": 0.5503518549470057,
+      "distancePct": 0.5214372774756584,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3514,35 +3551,16 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 36.21943573667711,
-      "deltaExposure": 865.7114054293808,
-      "gammaExposure": 281.2588440860556,
-      "vannaExposure": 522.165832504735
+      "deltaExposure": 1607.6467616382254,
+      "gammaExposure": 502.59850107907823,
+      "vannaExposure": 893.6514947858166
     },
     {
-      "strike": 3970,
-      "callOi": 141,
-      "putOi": 175,
-      "totalOi": 316,
-      "distancePct": 0.1440328743753927,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24000000000000002,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 45.24050632911393,
-      "deltaExposure": -54095156.640993506,
-      "gammaExposure": -247426.28437842958,
-      "vannaExposure": -145740.31754847296
-    },
-    {
-      "strike": 3725,
-      "callOi": 58,
-      "putOi": 254,
-      "totalOi": 312,
-      "distancePct": 0.07343134938245284,
+      "strike": 3590,
+      "callOi": 112,
+      "putOi": 205,
+      "totalOi": 317,
+      "distancePct": 0.015234168427065715,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3551,17 +3569,36 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 54.44871794871795,
-      "deltaExposure": -63139239.89516788,
-      "gammaExposure": -2255429.1301833093,
-      "vannaExposure": -703920.108161367
+      "daysToExpiry": 55.90220820189275,
+      "deltaExposure": -21683677.78356476,
+      "gammaExposure": -1625539.1309451095,
+      "vannaExposure": -124465.89711313786
+    },
+    {
+      "strike": 3970,
+      "callOi": 142,
+      "putOi": 175,
+      "totalOi": 317,
+      "distancePct": 0.12269628096252114,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 45.201892744479494,
+      "deltaExposure": -51957127.37654383,
+      "gammaExposure": -281803.9050429295,
+      "vannaExposure": -144231.75838266208
     },
     {
       "strike": 4505,
       "callOi": 274,
       "putOi": 37,
       "totalOi": 311,
-      "distancePct": 0.29820355140079197,
+      "distancePct": 0.27399162361112284,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3571,16 +3608,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 75.52090032154341,
-      "deltaExposure": -11524354.638305096,
-      "gammaExposure": 255730.8695912764,
-      "vannaExposure": 285521.4008634913
+      "deltaExposure": -11121793.492726073,
+      "gammaExposure": 363731.39409180626,
+      "vannaExposure": 377539.4889092292
     },
     {
       "strike": 4760,
       "callOi": 307,
       "putOi": 3,
       "totalOi": 310,
-      "distancePct": 0.3716867712914028,
+      "distancePct": 0.3461043570230732,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3590,16 +3627,16 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 55.806451612903224,
-      "deltaExposure": -895165.3445721979,
-      "gammaExposure": 36821.330749132976,
-      "vannaExposure": 49471.80119226858
+      "deltaExposure": -820760.7078335014,
+      "gammaExposure": 59487.95388603637,
+      "vannaExposure": 75233.1971577395
     },
     {
       "strike": 7700,
       "callOi": 310,
       "putOi": 0,
       "totalOi": 310,
-      "distancePct": 1.218905071206681,
+      "distancePct": 1.1775217540079126,
       "expiryCount": 2,
       "expiryDates": [
         "2026-12-28",
@@ -3608,16 +3645,34 @@
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 36.461290322580645,
-      "deltaExposure": 7.787101276758099e-9,
-      "gammaExposure": 6.103165087739912e-9,
-      "vannaExposure": 2.03923508392697e-8
+      "deltaExposure": 3.5347234265850185e-8,
+      "gammaExposure": 2.8042201029582128e-8,
+      "vannaExposure": 9.149696689935588e-8
     },
     {
-      "strike": 3590,
-      "callOi": 110,
-      "putOi": 198,
-      "totalOi": 308,
-      "distancePct": 0.03452846826389414,
+      "strike": 3040,
+      "callOi": 0,
+      "putOi": 309,
+      "totalOi": 309,
+      "distancePct": -0.1403030997163566,
+      "expiryCount": 2,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26"
+      ],
+      "impliedVol": 0.24,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 61.530744336569576,
+      "deltaExposure": -6147724.737859525,
+      "gammaExposure": -1250346.6376152982,
+      "vannaExposure": 762199.5507127298
+    },
+    {
+      "strike": 4095,
+      "callOi": 189,
+      "putOi": 115,
+      "totalOi": 304,
+      "distancePct": 0.15804566008602622,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3626,17 +3681,17 @@
       ],
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 55.81818181818182,
-      "deltaExposure": -28820300.278345067,
-      "gammaExposure": -1434166.0319752542,
-      "vannaExposure": -221609.2648482545
+      "daysToExpiry": 64.11842105263158,
+      "deltaExposure": -32186226.106137354,
+      "gammaExposure": 495287.44752048125,
+      "vannaExposure": 318637.16173945216
     },
     {
       "strike": 6025,
       "callOi": 304,
       "putOi": 0,
       "totalOi": 304,
-      "distancePct": 0.7362211758467861,
+      "distancePct": 0.7038400737529446,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3646,16 +3701,16 @@
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 34.42763157894737,
-      "deltaExposure": 0.9121631285525,
-      "gammaExposure": 0.37753832637637247,
-      "vannaExposure": 0.8786700807999923
+      "deltaExposure": 2.010998883577721,
+      "gammaExposure": 0.8152438732783452,
+      "vannaExposure": 1.8331489731143875
     },
     {
-      "strike": 3985,
-      "callOi": 126,
-      "putOi": 177,
-      "totalOi": 303,
-      "distancePct": 0.1483554167218992,
+      "strike": 3585,
+      "callOi": 15,
+      "putOi": 285,
+      "totalOi": 300,
+      "distancePct": 0.013820193262125512,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3664,35 +3719,17 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 53.92079207920792,
-      "deltaExposure": -53521739.05992895,
-      "gammaExposure": -363453.3701442492,
-      "vannaExposure": -217836.48736657872
-    },
-    {
-      "strike": 3040,
-      "callOi": 0,
-      "putOi": 302,
-      "totalOi": 302,
-      "distancePct": -0.12396475110801165,
-      "expiryCount": 2,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26"
-      ],
-      "impliedVol": 0.23999999999999996,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 61.90397350993378,
-      "deltaExposure": -8585107.870260533,
-      "gammaExposure": -1601387.851729833,
-      "vannaExposure": 850481.39817561
+      "daysToExpiry": 40.06,
+      "deltaExposure": -53452037.308310494,
+      "gammaExposure": -4934336.927912507,
+      "vannaExposure": -343214.09141970467
     },
     {
       "strike": 4445,
       "callOi": 286,
       "putOi": 14,
       "totalOi": 300,
-      "distancePct": 0.28091338201476584,
+      "distancePct": 0.2570239216318404,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3702,16 +3739,35 @@
       "impliedVol": 0.23999999999999996,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 38.98,
-      "deltaExposure": -4641531.354232425,
-      "gammaExposure": 45884.1778457777,
-      "vannaExposure": 48190.82295609391
+      "deltaExposure": -4582053.874843461,
+      "gammaExposure": 82917.22086332043,
+      "vannaExposure": 80481.26930496834
+    },
+    {
+      "strike": 3925,
+      "callOi": 143,
+      "putOi": 156,
+      "totalOi": 299,
+      "distancePct": 0.10997050447805931,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.23999999999999996,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 57.09364548494983,
+      "deltaExposure": -40124906.271684915,
+      "gammaExposure": -44181.725027612294,
+      "vannaExposure": -15982.0307346505
     },
     {
       "strike": 7800,
-      "callOi": 297,
+      "callOi": 298,
       "putOi": 0,
-      "totalOi": 297,
-      "distancePct": 1.247722020183391,
+      "totalOi": 298,
+      "distancePct": 1.2058012573067165,
       "expiryCount": 2,
       "expiryDates": [
         "2026-12-28",
@@ -3719,36 +3775,55 @@
       ],
       "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 34.562289562289564,
-      "deltaExposure": 1.2245073260749836e-9,
-      "gammaExposure": 9.206362077796989e-10,
-      "vannaExposure": 3.1255956870568526e-9
+      "daysToExpiry": 34.557046979865774,
+      "deltaExposure": 5.303059967077359e-9,
+      "gammaExposure": 4.336385989991573e-9,
+      "vannaExposure": 1.4382037532238605e-8
     },
     {
-      "strike": 4045,
-      "callOi": 167,
-      "putOi": 127,
-      "totalOi": 294,
-      "distancePct": 0.1656455861079253,
+      "strike": 3965,
+      "callOi": 51,
+      "putOi": 246,
+      "totalOi": 297,
+      "distancePct": 0.12128230579758094,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
         "2027-01-26",
         "2027-02-23"
       ],
-      "impliedVol": 0.24000000000000002,
+      "impliedVol": 0.24,
       "volatilitySource": "fallback-median",
-      "daysToExpiry": 36.63945578231292,
-      "deltaExposure": -41408858.256648876,
-      "gammaExposure": 83733.25715510403,
-      "vannaExposure": 54208.64919018741
+      "daysToExpiry": 67.72727272727273,
+      "deltaExposure": -71795718.80357866,
+      "gammaExposure": -1476845.7999919201,
+      "vannaExposure": -739749.7533821795
+    },
+    {
+      "strike": 4060,
+      "callOi": 163,
+      "putOi": 134,
+      "totalOi": 297,
+      "distancePct": 0.1481478339314448,
+      "expiryCount": 3,
+      "expiryDates": [
+        "2026-12-28",
+        "2027-01-26",
+        "2027-02-23"
+      ],
+      "impliedVol": 0.23999999999999996,
+      "volatilitySource": "fallback-median",
+      "daysToExpiry": 51.64983164983165,
+      "deltaExposure": -40150031.504748136,
+      "gammaExposure": 203983.74659141336,
+      "vannaExposure": 123132.17341736799
     },
     {
       "strike": 4825,
       "callOi": 289,
       "putOi": 5,
       "totalOi": 294,
-      "distancePct": 0.39041778812626443,
+      "distancePct": 0.36448603416729586,
       "expiryCount": 3,
       "expiryDates": [
         "2026-12-28",
@@ -3758,16 +3833,16 @@
       "impliedVol": 0.24000000000000002,
       "volatilitySource": "fallback-median",
       "daysToExpiry": 56.13945578231292,
-      "deltaExposure": -1671849.3146131036,
-      "gammaExposure": 16362.912891258105,
-      "vannaExposure": 22837.755093863518
+      "deltaExposure": -1659529.0690530485,
+      "gammaExposure": 29492.978056524207,
+      "vannaExposure": 38840.786467178375
     },
     {
       "strike": 20000,
       "callOi": 294,
       "putOi": 0,
       "totalOi": 294,
-      "distancePct": 4.763389795342029,
+      "distancePct": 4.655900659760811,
       "expiryCount": 1,
       "expiryDates": [
         "2026-12-28"
@@ -3776,83 +3851,8 @@
       "volatilitySource": "fallback-median",
       "daysToExpiry": 33,
       "deltaExposure": 0,
-      "gammaExposure": 1.6150515638244026e-121,
-      "vannaExposure": 1.1804207598568224e-120
-    },
-    {
-      "strike": 3940,
-      "callOi": 55,
-      "putOi": 237,
-      "totalOi": 292,
-      "distancePct": 0.13538778968237963,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 55.86643835616438,
-      "deltaExposure": -72314016.07859686,
-      "gammaExposure": -1172359.346649329,
-      "vannaExposure": -644749.5409432516
-    },
-    {
-      "strike": 4510,
-      "callOi": 269,
-      "putOi": 23,
-      "totalOi": 292,
-      "distancePct": 0.29964439884962746,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 44.88013698630137,
-      "deltaExposure": -7625392.726235783,
-      "gammaExposure": 43788.99214369286,
-      "vannaExposure": 48871.43687244365
-    },
-    {
-      "strike": 3965,
-      "callOi": 45,
-      "putOi": 246,
-      "totalOi": 291,
-      "distancePct": 0.14259202692655717,
-      "expiryCount": 3,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26",
-        "2027-02-23"
-      ],
-      "impliedVol": 0.24000000000000002,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 67.55670103092784,
-      "deltaExposure": -74321325.76379256,
-      "gammaExposure": -1216037.4575217445,
-      "vannaExposure": -704969.998991065
-    },
-    {
-      "strike": 3140,
-      "callOi": 0,
-      "putOi": 287,
-      "totalOi": 287,
-      "distancePct": -0.0951478021313015,
-      "expiryCount": 2,
-      "expiryDates": [
-        "2026-12-28",
-        "2027-01-26"
-      ],
-      "impliedVol": 0.24,
-      "volatilitySource": "fallback-median",
-      "daysToExpiry": 56.64459930313589,
-      "deltaExposure": -13076821.018485786,
-      "gammaExposure": -2223023.859252685,
-      "vannaExposure": 884311.9034510725
+      "gammaExposure": 8.860338162651635e-119,
+      "vannaExposure": 6.406405487485471e-118
     }
   ]
 }
